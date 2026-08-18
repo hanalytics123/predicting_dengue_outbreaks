@@ -1,0 +1,20 @@
+metric,value
+study_area,"Maynas, Loreto, Peru"
+spatial_resolution,Admin2
+temporal_resolution,Week
+first_week,2000-01-02
+last_week,2023-12-24
+observed_weeks,1248
+expected_weeks,1252
+missing_weeks,4
+coverage_pct,99.68
+duplicate_weeks,0
+missing_case_values,0
+negative_case_values,0
+zero_case_weeks,0
+total_cases,68760
+mean_weekly_cases,55.1
+median_weekly_cases,20.0
+max_weekly_cases,2941
+all_week_starts_sunday,True
+case_definitions,Probable and confirmed
