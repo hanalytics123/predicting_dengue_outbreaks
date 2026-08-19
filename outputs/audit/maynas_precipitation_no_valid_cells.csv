@@ -1,0 +1,5 @@
+date,precip_mean_mm,precip_min_cell_mm,precip_max_cell_mm,valid_grid_cells,source_zip,source_file,source_data_available
+2011-12-13,,,,0,maynas_persiann_cdr_2000_2011.zip,CDR_20111213z.asc,False
+2012-11-27,,,,0,maynas_persiann_cdr_2012_2023.zip,CDR_20121127z.asc,False
+2012-11-28,,,,0,maynas_persiann_cdr_2012_2023.zip,CDR_20121128z.asc,False
+2012-11-29,,,,0,maynas_persiann_cdr_2012_2023.zip,CDR_20121129z.asc,False

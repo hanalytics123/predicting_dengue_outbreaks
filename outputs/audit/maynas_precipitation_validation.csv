@@ -1,0 +1,21 @@
+metric,value
+source,PERSIANN-CDR
+spatial_unit,"Maynas, Loreto, Peru"
+daily_first_date,2000-01-01
+daily_last_date,2023-12-31
+daily_expected_calendar_days,8766
+daily_raster_files_observed,8766
+daily_dates_without_raster_file,0
+daily_rasters_without_valid_cells,4
+duplicate_daily_dates,0
+grid_ncols,17
+grid_nrows,18
+grid_cellsize_degrees,0.25
+grid_xllcorner,-76.0
+grid_yllcorner,-4.75
+valid_grid_cell_count_min_positive,100
+valid_grid_cell_count_max,100
+weekly_rows_target_range,1252
+incomplete_precip_weeks_target_range,2
+dengue_weeks_without_precip_row,0
+rain_day_threshold_mm,1.0
