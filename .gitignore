@@ -1,3 +1,7 @@
+# Large raw source data
+data/raw/boundaries/gaul2024/
+data/raw/precipitation/
+
 # Python
 __pycache__/
 *.py[cod]
