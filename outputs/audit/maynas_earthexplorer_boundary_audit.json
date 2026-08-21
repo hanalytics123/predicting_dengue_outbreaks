@@ -1,0 +1,70 @@
+{
+  "input_file": "\\\\worldwide.bbc.co.uk\\dfs\\WDL\\Departmental Secure\\Human Resources\\HROps\\HR Operations\\Reports\\Hannah\\Python Repository\\predicting_dengue_outbreaks\\data\\processed\\boundaries\\maynas_gaul2024.geojson",
+  "output_file": "\\\\worldwide.bbc.co.uk\\dfs\\WDL\\Departmental Secure\\Human Resources\\HROps\\HR Operations\\Reports\\Hannah\\Python Repository\\predicting_dengue_outbreaks\\data\\processed\\boundaries\\maynas_earthexplorer.geojson",
+  "target_max_points": 450,
+  "selected_tolerance_degrees": 0.003321506250000001,
+  "original": {
+    "geometry_type": "Polygon",
+    "polygon_parts": 1,
+    "point_count": 2758,
+    "area_degrees_squared": 6.198810381212781,
+    "bounds": [
+      -75.78114648532198,
+      -4.70970897329039,
+      -72.1171929822703,
+      -0.639366964213934
+    ],
+    "is_valid": true
+  },
+  "simplified": {
+    "geometry_type": "Polygon",
+    "polygon_parts": 1,
+    "point_count": 386,
+    "area_degrees_squared": 6.198685676715611,
+    "area_change_percent": -0.0020117488598835527,
+    "bounds": [
+      -75.78110073501085,
+      -4.70970897329039,
+      -72.11844298235764,
+      -0.639366964213934
+    ],
+    "is_valid": true
+  },
+  "iterations": [
+    {
+      "tolerance_degrees": 0.001,
+      "point_count": 763,
+      "polygon_parts": 1,
+      "is_valid": true,
+      "area_change_percent": -0.001259704870182634
+    },
+    {
+      "tolerance_degrees": 0.00135,
+      "point_count": 639,
+      "polygon_parts": 1,
+      "is_valid": true,
+      "area_change_percent": 0.0008249803295828761
+    },
+    {
+      "tolerance_degrees": 0.0018225000000000001,
+      "point_count": 523,
+      "polygon_parts": 1,
+      "is_valid": true,
+      "area_change_percent": 0.006561248235135979
+    },
+    {
+      "tolerance_degrees": 0.0024603750000000003,
+      "point_count": 451,
+      "polygon_parts": 1,
+      "is_valid": true,
+      "area_change_percent": 0.007654491669047249
+    },
+    {
+      "tolerance_degrees": 0.003321506250000001,
+      "point_count": 386,
+      "polygon_parts": 1,
+      "is_valid": true,
+      "area_change_percent": -0.0020117488598835527
+    }
+  ]
+}
