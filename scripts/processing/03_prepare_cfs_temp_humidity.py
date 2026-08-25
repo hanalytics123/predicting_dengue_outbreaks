@@ -53,9 +53,10 @@ EXPECTED_VARIABLES = {
 EXPECTED_FORECAST_HOUR = 6
 EXPECTED_GRID_RESOLUTION = 0.5
 
-# Weekly periods use Monday as the week start, consistent with
-# the precipitation preparation and dengue modelling workflow.
-WEEK_FREQUENCY = "W-SUN"
+# Weekly periods use Sunday as the week start, consistent with
+# the precipitation and dengue weekly datasets. Pandas W-SAT
+# groups Sunday-Saturday weeks and labels them by Saturday.
+WEEK_FREQUENCY = "W-SAT"
 
 
 # ============================================================
@@ -477,7 +478,7 @@ daily.to_csv(
 # ============================================================
 
 # Use the harmonised 6-hourly series directly for weekly climate
-# statistics. Weeks end Sunday, therefore week_start_date is Monday.
+# statistics. Weeks end Saturday, therefore week_start_date is Sunday.
 
 weekly_source = (
     combined

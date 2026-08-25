@@ -30,7 +30,7 @@ CFSv2 first timestamp: 2011-01-01 06:00:00
 
 Daily rows: 8,766
 Incomplete days: 1
-Weekly rows: 1,253
+Weekly rows: 1,254
 Incomplete weeks: 2
 
 Units:

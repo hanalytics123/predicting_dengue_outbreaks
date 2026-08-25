@@ -18,6 +18,14 @@ INPUT_FILE = (
     / "maynas_mod13q1_ndvi_2000_2023.csv"
 )
 
+DENGUE_WEEKLY_FILE = (
+    PROJECT_ROOT
+    / "data"
+    / "processed"
+    / "dengue"
+    / "maynas_dengue_weekly.csv"
+)
+
 PROCESSED_DIR = (
     PROJECT_ROOT
     / "data"
@@ -61,8 +69,8 @@ SUMMARY_OUTPUT = (
 # PROCESSING SETTINGS
 # ============================================================
 
-# Weekly periods use Monday as the week start.
-WEEK_FREQUENCY = "W-SUN"
+# Weekly periods use Sunday as the week start.
+WEEK_FREQUENCY = "W-SAT"
 
 # Coverage established during the audit.
 EXPECTED_START_DATE = pd.Timestamp("2000-02-18")
@@ -188,40 +196,54 @@ native.to_csv(
 # CREATE WEEKLY TIMELINE
 # ============================================================
 
-# The weekly timeline is anchored to Monday-Sunday weeks.
+# NDVI is aligned to the dengue modelling timeline.
 #
-# We start with the Monday of the week containing the first
-# MODIS observation and end with the Sunday of the week
-# containing the final MODIS observation.
+# Dengue uses Sunday-Saturday epidemiological weeks identified
+# by the Sunday week_start_date. Using the dengue timeline here
+# ensures that NDVI can be joined directly to the target data.
+#
+# Weeks before the first MODIS observation remain missing.
+# Later weeks use only the most recent MODIS observation
+# available on or before the Saturday week end.
 
-first_week_start = (
-    df["date"].min()
-    - pd.to_timedelta(
-        df["date"].min().weekday(),
-        unit="D"
+if not DENGUE_WEEKLY_FILE.exists():
+    raise FileNotFoundError(
+        f"Dengue weekly file not found:\n{DENGUE_WEEKLY_FILE}"
     )
+
+dengue_weeks = pd.read_csv(
+    DENGUE_WEEKLY_FILE,
+    usecols=["week_start_date"]
 )
 
-last_week_end = (
-    df["date"].max()
-    + pd.to_timedelta(
-        6 - df["date"].max().weekday(),
-        unit="D"
-    )
+dengue_weeks["week_start_date"] = pd.to_datetime(
+    dengue_weeks["week_start_date"],
+    errors="coerce"
 )
+
+if dengue_weeks["week_start_date"].isna().any():
+    raise ValueError(
+        "One or more dengue week_start_date values could not be parsed."
+    )
+
+# Create a COMPLETE Sunday weekly sequence between the first and
+# last dengue weeks. This deliberately includes the four known
+# missing dengue surveillance weeks so that NDVI processing is
+# independent of gaps in the target observations.
+first_week_start = dengue_weeks["week_start_date"].min()
+last_week_start = dengue_weeks["week_start_date"].max()
 
 weekly = pd.DataFrame({
-    "week_end_date": pd.date_range(
-        start=first_week_start
-        + pd.to_timedelta(6, unit="D"),
-        end=last_week_end,
-        freq=WEEK_FREQUENCY
+    "week_start_date": pd.date_range(
+        start=first_week_start,
+        end=last_week_start,
+        freq="W-SUN"
     )
 })
 
-weekly["week_start_date"] = (
-    weekly["week_end_date"]
-    - pd.to_timedelta(
+weekly["week_end_date"] = (
+    weekly["week_start_date"]
+    + pd.to_timedelta(
         6,
         unit="D"
     )
@@ -495,7 +517,7 @@ summary.append(
 
 summary.append("")
 summary.append(
-    "Alignment method: each Monday-Sunday weekly row is assigned "
+    "Alignment method: each Sunday-Saturday weekly row is assigned "
     "the most recent MOD13Q1 observation available on or before "
     "the week end date."
 )

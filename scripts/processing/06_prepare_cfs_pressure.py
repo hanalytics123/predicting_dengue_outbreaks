@@ -98,7 +98,7 @@ EXPECTED_GRID_RESOLUTION = 0.5
 
 PRESSURE_VARIABLE = "PRES_L1"
 
-WEEK_FREQUENCY = "W-SUN"
+WEEK_FREQUENCY = "W-SAT"
 
 
 # ============================================================

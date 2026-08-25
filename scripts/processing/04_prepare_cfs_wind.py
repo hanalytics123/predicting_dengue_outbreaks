@@ -57,7 +57,7 @@ V_WIND_CANDIDATES = [
     "VGRD_L103",
 ]
 
-WEEK_FREQUENCY = "W-SUN"
+WEEK_FREQUENCY = "W-SAT"
 
 
 # ============================================================
@@ -1179,7 +1179,7 @@ summary.append(
 
 summary.append(
     "Temporal method: native 6-hourly observations retained; "
-    "daily and Monday-Sunday weekly mean/min/max features derived."
+    "daily and Sunday-Saturday weekly mean/min/max features derived."
 )
 
 if cfsr_failed or cfsv2_failed:

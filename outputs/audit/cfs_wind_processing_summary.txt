@@ -19,7 +19,7 @@ CFSv2 first timestamp: 2011-01-01 06:00:00
 
 Daily rows: 8,766
 Incomplete days: 1
-Weekly rows: 1,253
+Weekly rows: 1,254
 Incomplete weeks: 2
 
 Units after processing:
@@ -29,4 +29,4 @@ Units after processing:
 
 Spatial method: unweighted mean of 0.5-degree grid-cell centres falling inside the GAUL 2024 Maynas polygon.
 Wind-speed method: magnitude of the Maynas-level mean U/V wind vector calculated at each 6-hour timestamp as sqrt(u^2 + v^2).
-Temporal method: native 6-hourly observations retained; daily and Monday-Sunday weekly mean/min/max features derived.
+Temporal method: native 6-hourly observations retained; daily and Sunday-Saturday weekly mean/min/max features derived.

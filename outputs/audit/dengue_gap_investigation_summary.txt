@@ -1,0 +1,63 @@
+==============================================================================
+DENGUE WEEKLY GAP INVESTIGATION
+==============================================================================
+
+Input rows: 1,248
+First week: 2000-01-02 00:00:00
+Last week: 2023-12-24 00:00:00
+Expected Sunday weeks: 1,252
+Observed Sunday weeks: 1,248
+Missing weeks: 4
+
+MISSING WEEK_START_DATE VALUES
+------------------------------------------------------------------------------
+2000-04-30
+2000-06-11
+2000-06-25
+2000-07-09
+
+GAP CONTEXT
+------------------------------------------------------------------------------
+
+Missing week: 2000-04-30
+  2000-04-09 | before | dengue_cases=17 | iso_year=2000 | iso_week=14
+  2000-04-16 | before | dengue_cases=4 | iso_year=2000 | iso_week=15
+  2000-04-23 | before | dengue_cases=2 | iso_year=2000 | iso_week=16
+  2000-05-07 | after | dengue_cases=3 | iso_year=2000 | iso_week=18
+  2000-05-14 | after | dengue_cases=2 | iso_year=2000 | iso_week=19
+  2000-05-21 | after | dengue_cases=1 | iso_year=2000 | iso_week=20
+
+Missing week: 2000-06-11
+  2000-05-21 | before | dengue_cases=1 | iso_year=2000 | iso_week=20
+  2000-05-28 | before | dengue_cases=2 | iso_year=2000 | iso_week=21
+  2000-06-04 | before | dengue_cases=1 | iso_year=2000 | iso_week=22
+  2000-06-18 | after | dengue_cases=1 | iso_year=2000 | iso_week=24
+  2000-07-02 | after | dengue_cases=13 | iso_year=2000 | iso_week=26
+  2000-07-16 | after | dengue_cases=3 | iso_year=2000 | iso_week=28
+
+Missing week: 2000-06-25
+  2000-05-28 | before | dengue_cases=2 | iso_year=2000 | iso_week=21
+  2000-06-04 | before | dengue_cases=1 | iso_year=2000 | iso_week=22
+  2000-06-18 | before | dengue_cases=1 | iso_year=2000 | iso_week=24
+  2000-07-02 | after | dengue_cases=13 | iso_year=2000 | iso_week=26
+  2000-07-16 | after | dengue_cases=3 | iso_year=2000 | iso_week=28
+  2000-07-23 | after | dengue_cases=2 | iso_year=2000 | iso_week=29
+
+Missing week: 2000-07-09
+  2000-06-04 | before | dengue_cases=1 | iso_year=2000 | iso_week=22
+  2000-06-18 | before | dengue_cases=1 | iso_year=2000 | iso_week=24
+  2000-07-02 | before | dengue_cases=13 | iso_year=2000 | iso_week=26
+  2000-07-16 | after | dengue_cases=3 | iso_year=2000 | iso_week=28
+  2000-07-23 | after | dengue_cases=2 | iso_year=2000 | iso_week=29
+  2000-07-30 | after | dengue_cases=3 | iso_year=2000 | iso_week=30
+
+ROWS FOLLOWING A GAP > 7 DAYS
+------------------------------------------------------------------------------
+2000-05-07 | days_since_previous=14 | dengue_cases=3 | iso_year=2000 | iso_week=18
+2000-06-18 | days_since_previous=14 | dengue_cases=1 | iso_year=2000 | iso_week=24
+2000-07-02 | days_since_previous=14 | dengue_cases=13 | iso_year=2000 | iso_week=26
+2000-07-16 | days_since_previous=14 | dengue_cases=3 | iso_year=2000 | iso_week=28
+
+INTERPRETATION
+------------------------------------------------------------------------------
+This script does not fill or modify missing dengue weeks. It only identifies the gaps and shows the neighbouring reported observations so we can determine the appropriate next investigation.

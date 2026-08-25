@@ -1,0 +1,112 @@
+==============================================================================
+WEEKLY DATASET ALIGNMENT CHECK SUMMARY
+==============================================================================
+
+dengue
+------------------------------------------------------------------------------
+Path: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\data\processed\dengue\maynas_dengue_weekly.csv
+Status: FAIL
+Rows: 1248
+First week_start_date: 2000-01-02 00:00:00
+Last week_start_date: 2023-12-24 00:00:00
+All week_start_date values Sunday: True
+Non-Sunday weeks: 0
+Duplicate weeks: 0
+Missing week_start_date values: 0
+Missing expected weeks inside coverage: 4
+Notes: 4 missing weekly date(s) within coverage
+
+precipitation
+------------------------------------------------------------------------------
+Path: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\data\processed\persiann\maynas_precipitation_weekly.csv
+Status: PASS
+Rows: 1252
+First week_start_date: 2000-01-02 00:00:00
+Last week_start_date: 2023-12-24 00:00:00
+All week_start_date values Sunday: True
+Non-Sunday weeks: 0
+Duplicate weeks: 0
+Missing week_start_date values: 0
+Missing expected weeks inside coverage: 0
+Notes: Weekly alignment checks passed.
+
+temp_humidity
+------------------------------------------------------------------------------
+Path: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\data\processed\cfs\maynas_cfs_temp_humidity_weekly.csv
+Status: PASS
+Rows: 1254
+First week_start_date: 1999-12-26 00:00:00
+Last week_start_date: 2023-12-31 00:00:00
+All week_start_date values Sunday: True
+Non-Sunday weeks: 0
+Duplicate weeks: 0
+Missing week_start_date values: 0
+Missing expected weeks inside coverage: 0
+Notes: Weekly alignment checks passed.
+
+wind
+------------------------------------------------------------------------------
+Path: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\data\processed\cfs\maynas_cfs_wind_weekly.csv
+Status: PASS
+Rows: 1254
+First week_start_date: 1999-12-26 00:00:00
+Last week_start_date: 2023-12-31 00:00:00
+All week_start_date values Sunday: True
+Non-Sunday weeks: 0
+Duplicate weeks: 0
+Missing week_start_date values: 0
+Missing expected weeks inside coverage: 0
+Notes: Weekly alignment checks passed.
+
+pressure
+------------------------------------------------------------------------------
+Path: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\data\processed\cfs\maynas_cfs_pressure_weekly.csv
+Status: PASS
+Rows: 1254
+First week_start_date: 1999-12-26 00:00:00
+Last week_start_date: 2023-12-31 00:00:00
+All week_start_date values Sunday: True
+Non-Sunday weeks: 0
+Duplicate weeks: 0
+Missing week_start_date values: 0
+Missing expected weeks inside coverage: 0
+Notes: Weekly alignment checks passed.
+
+ndvi
+------------------------------------------------------------------------------
+Path: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\data\processed\ndvi\maynas_mod13q1_ndvi_weekly.csv
+Status: PASS
+Rows: 1252
+First week_start_date: 2000-01-02 00:00:00
+Last week_start_date: 2023-12-24 00:00:00
+All week_start_date values Sunday: True
+Non-Sunday weeks: 0
+Duplicate weeks: 0
+Missing week_start_date values: 0
+Missing expected weeks inside coverage: 0
+Notes: Weekly alignment checks passed.
+
+==============================================================================
+OVERLAP WITH DENGUE MASTER TIMELINE
+==============================================================================
+precipitation:
+  Dengue weeks matched: 1,248 / 1,248
+  Dengue weeks with no matching precipitation week: 0
+temp_humidity:
+  Dengue weeks matched: 1,248 / 1,248
+  Dengue weeks with no matching temp_humidity week: 0
+wind:
+  Dengue weeks matched: 1,248 / 1,248
+  Dengue weeks with no matching wind week: 0
+pressure:
+  Dengue weeks matched: 1,248 / 1,248
+  Dengue weeks with no matching pressure week: 0
+ndvi:
+  Dengue weeks matched: 1,248 / 1,248
+  Dengue weeks with no matching ndvi week: 0
+
+==============================================================================
+OVERALL RESULT
+==============================================================================
+FAIL - one or more datasets require attention:
+  - dengue
