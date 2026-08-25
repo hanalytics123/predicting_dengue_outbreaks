@@ -1,0 +1,42 @@
+==============================================================================
+CFS SURFACE PRESSURE PROCESSING SUMMARY
+==============================================================================
+
+STREAM SELECTION
+------------------------------------------------------------------------------
+Selected stream: pgbh / pgrbh
+Excluded stream: ipvh / ipvgrbh
+Rationale: pgbh/pgrbh provides a continuous pressure file lineage across the full study period. Representative stream comparisons showed small grid-cell differences but negligible differences in Maynas-level spatial mean pressure.
+
+CFSR total pressure files: 865
+CFSR selected pgbh files: 793
+CFSR excluded alternative-stream files: 72
+CFSR failed during processing: 0
+
+CFSv2 total pressure files: 9,350
+CFSv2 selected pgrbh files: 4,675
+CFSv2 excluded alternative-stream files: 4,675
+CFSv2 failed during processing: 0
+
+6-hourly rows: 35,061
+First timestamp: 2000-01-01 00:00:00
+Last timestamp: 2023-12-31 00:00:00
+Expected 6-hourly timestamps: 35,061
+Missing 6-hourly timestamps: 0
+Duplicate timestamps: 0
+
+CFSR final timestamp: 2011-01-01 00:00:00
+CFSv2 first timestamp: 2011-01-01 06:00:00
+
+Daily rows: 8,766
+Incomplete days: 1
+Weekly rows: 1,253
+Incomplete weeks: 2
+
+Units:
+  Raw/6-hourly pressure: Pa
+  Derived pressure: hPa
+  Daily/weekly modelling features: hPa
+
+Spatial method: unweighted mean of 0.5-degree grid-cell centres falling inside the GAUL 2024 Maynas polygon.
+Temporal method: native 6-hourly observations retained; daily and Monday-Sunday weekly mean/min/max pressure features derived.
