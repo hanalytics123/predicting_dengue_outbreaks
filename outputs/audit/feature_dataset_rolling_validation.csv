@@ -1,0 +1,12 @@
+feature,source_variable,window_weeks,statistic,status,rows_checked,mismatches,max_abs_difference
+dengue_cases_prev4w_mean,dengue_cases,4,mean,PASS,1248,0,0.0
+dengue_cases_prev8w_mean,dengue_cases,8,mean,PASS,1248,0,0.0
+dengue_cases_prev4w_std,dengue_cases,4,std,PASS,1248,0,2.842170943040401e-14
+precip_sum_mm_prev4w_sum,precip_sum_mm,4,sum,PASS,1248,0,5.684341886080802e-14
+precip_sum_mm_prev8w_sum,precip_sum_mm,8,sum,PASS,1248,0,5.684341886080802e-14
+temperature_c_mean_prev4w_mean,temperature_c_mean,4,mean,PASS,1248,0,3.552713678800501e-15
+relative_humidity_pct_mean_prev4w_mean,relative_humidity_pct_mean,4,mean,PASS,1248,0,1.4210854715202004e-14
+specific_humidity_kgkg_mean_prev4w_mean,specific_humidity_kgkg_mean,4,mean,PASS,1248,0,9.8879238130678e-17
+wind_speed_ms_mean_prev4w_mean,wind_speed_ms_mean,4,mean,PASS,1248,0,2.220446049250313e-16
+surface_pressure_hpa_mean_prev4w_mean,surface_pressure_hpa_mean,4,mean,PASS,1248,0,1.1368683772161603e-13
+ndvi_mean_weekly_prev4w_mean,ndvi_mean_weekly,4,mean,PASS,1248,0,0.0

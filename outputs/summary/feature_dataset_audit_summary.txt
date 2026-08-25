@@ -1,0 +1,174 @@
+==============================================================================
+ONE-WEEK-AHEAD FEATURE DATASET AUDIT
+==============================================================================
+
+OVERALL RESULT
+------------------------------------------------------------------------------
+PASS
+
+DATASET STRUCTURE
+------------------------------------------------------------------------------
+Rows: 1,248
+Columns: 73
+Candidate feature columns audited: 54
+First target week: 2000-01-02
+Last target week: 2023-12-24
+
+STRUCTURAL / LEAKAGE CHECKS
+------------------------------------------------------------------------------
+PASS: Expected feature rows — Observed rows: 1,248
+PASS: Unique target weeks — Duplicate week_start_date values: 0
+PASS: Sunday alignment — Non-Sunday target weeks: 0
+PASS: Chronological order — Rows sorted ascending by week_start_date
+PASS: No missing target — Missing target values: 0
+PASS: No negative target — Negative target values: 0
+PASS: No infinite numeric values — Infinite numeric values: 0
+PASS: Target values align with master dataset — Target mismatches: 0
+PASS: Forecast origin is exactly one week before target — Forecast-origin mismatches: 0
+PASS: Forecast horizon fixed at one week — Unique values: 1
+PASS: Known dengue gaps preserved — Observed missing weeks: 4; unexpected gaps: 0; missing expected gaps: 0
+PASS: Independent lag validation — Lag validation failures: 0
+PASS: Independent rolling-feature validation — Rolling validation failures: 0
+PASS: Derived feature validation — Derived-feature failures: 0
+PASS: No target-week raw environmental predictors — Unexpected raw columns: None
+PASS: No static master identifiers in feature table — Present identifiers: None
+PASS: feature_missing_count is accurate — Rows with incorrect feature_missing_count: 0
+PASS: all_candidate_features_available is accurate — Flag mismatches: 0
+
+MISSINGNESS
+------------------------------------------------------------------------------
+Rows with at least one missing candidate feature: 34
+Rows with all candidate features available: 1,214
+
+Columns with missing values:
+  dengue_cases_prev8w_mean: 23 (1.84%)
+  precip_sum_mm_prev8w_sum: 23 (1.84%)
+  ndvi_mean_weekly_lag12: 21 (1.68%)
+  ndvi_mean_weekly_prev4w_mean: 20 (1.60%)
+  ndvi_mean_weekly_lag8: 17 (1.36%)
+  temperature_c_mean_lag12: 16 (1.28%)
+  precip_sum_mm_lag12: 16 (1.28%)
+  dengue_cases_lag12: 16 (1.28%)
+  relative_humidity_pct_mean_lag12: 16 (1.28%)
+  wind_speed_ms_mean_lag12: 16 (1.28%)
+  specific_humidity_kgkg_mean_lag12: 16 (1.28%)
+  surface_pressure_hpa_mean_lag12: 16 (1.28%)
+  surface_pressure_hpa_mean_prev4w_mean: 14 (1.12%)
+  precip_sum_mm_prev4w_sum: 14 (1.12%)
+  temperature_c_mean_prev4w_mean: 14 (1.12%)
+  dengue_cases_prev4w_std: 14 (1.12%)
+  dengue_cases_prev4w_mean: 14 (1.12%)
+  wind_speed_ms_mean_prev4w_mean: 14 (1.12%)
+  relative_humidity_pct_mean_prev4w_mean: 14 (1.12%)
+  specific_humidity_kgkg_mean_prev4w_mean: 14 (1.12%)
+  ndvi_mean_weekly_lag4: 13 (1.04%)
+  temperature_c_mean_lag8: 11 (0.88%)
+  surface_pressure_hpa_mean_lag8: 11 (0.88%)
+  wind_speed_ms_mean_lag8: 11 (0.88%)
+  ndvi_mean_weekly_lag1: 11 (0.88%)
+  dengue_recent_change_1v4: 11 (0.88%)
+  precip_sum_mm_lag8: 11 (0.88%)
+  specific_humidity_kgkg_mean_lag8: 11 (0.88%)
+  relative_humidity_pct_mean_lag8: 11 (0.88%)
+  qa_prev_low_valid_pixel_coverage: 11 (0.88%)
+  dengue_cases_lag8: 11 (0.88%)
+  ndvi_mean_weekly_lag2: 10 (0.80%)
+  dengue_cases_lag4: 7 (0.56%)
+  temperature_c_mean_lag4: 7 (0.56%)
+  precip_sum_mm_lag4: 7 (0.56%)
+  surface_pressure_hpa_mean_lag4: 7 (0.56%)
+  wind_speed_ms_mean_lag4: 7 (0.56%)
+  specific_humidity_kgkg_mean_lag4: 7 (0.56%)
+  relative_humidity_pct_mean_lag4: 7 (0.56%)
+  temperature_c_mean_lag1: 5 (0.40%)
+  qa_prev_wind_week_complete: 5 (0.40%)
+  qa_prev_ndvi_stale: 5 (0.40%)
+  qa_prev_pressure_week_complete: 5 (0.40%)
+  qa_prev_ndvi_available: 5 (0.40%)
+  qa_prev_ndvi_within_age_limit: 5 (0.40%)
+  qa_prev_precip_week_complete: 5 (0.40%)
+  surface_pressure_hpa_mean_lag1: 5 (0.40%)
+  qa_prev_temp_humidity_week_complete: 5 (0.40%)
+  specific_humidity_kgkg_mean_lag1: 5 (0.40%)
+  wind_speed_ms_mean_lag1: 5 (0.40%)
+  relative_humidity_pct_mean_lag1: 5 (0.40%)
+  dengue_cases_lag1: 5 (0.40%)
+  precip_sum_mm_lag1: 5 (0.40%)
+  surface_pressure_hpa_mean_lag2: 4 (0.32%)
+  precip_sum_mm_lag2: 4 (0.32%)
+  relative_humidity_pct_mean_lag2: 4 (0.32%)
+  dengue_cases_lag2: 4 (0.32%)
+  temperature_c_mean_lag2: 4 (0.32%)
+  wind_speed_ms_mean_lag2: 4 (0.32%)
+  specific_humidity_kgkg_mean_lag2: 4 (0.32%)
+
+LAG VALIDATION
+------------------------------------------------------------------------------
+Lag features checked: 40
+Lag validation failures: 0
+
+ROLLING VALIDATION
+------------------------------------------------------------------------------
+Rolling features checked: 11
+Rolling validation failures: 0
+
+CONSTANT / NEAR-CONSTANT FEATURES
+------------------------------------------------------------------------------
+Constant candidate features: 0
+  None
+Near-constant candidate features (>=99.5% dominant value): 0
+  None
+
+HIGH CORRELATION / REDUNDANCY
+------------------------------------------------------------------------------
+Feature pairs with |Pearson r| >= 0.95: 1
+  dengue_cases_lag2 <-> dengue_cases_prev4w_mean: r = 0.9694
+
+QA FIELDS
+------------------------------------------------------------------------------
+qa_prev_precip_week_complete:
+  True: 1,241
+  nan: 5
+  False: 2
+qa_prev_temp_humidity_week_complete:
+  True: 1,243
+  nan: 5
+qa_prev_wind_week_complete:
+  True: 1,243
+  nan: 5
+qa_prev_pressure_week_complete:
+  True: 1,243
+  nan: 5
+qa_prev_low_valid_pixel_coverage:
+  False: 1,176
+  True: 61
+  nan: 11
+qa_prev_ndvi_available:
+  True: 1,237
+  False: 6
+  nan: 5
+qa_prev_ndvi_within_age_limit:
+  True: 1,237
+  False: 6
+  nan: 5
+qa_prev_ndvi_stale:
+  False: 1,243
+  nan: 5
+
+AUDIT OUTPUTS
+------------------------------------------------------------------------------
+outputs/audit/feature_dataset_audit_summary.txt
+outputs/audit/feature_dataset_missingness.csv
+outputs/audit/feature_dataset_lag_validation.csv
+outputs/audit/feature_dataset_rolling_validation.csv
+outputs/audit/feature_dataset_redundancy.csv
+outputs/audit/feature_dataset_problem_rows.csv
+
+INTERPRETATION
+------------------------------------------------------------------------------
+A PASS indicates that the engineered dataset reproduces the expected calendar-week lags and rolling calculations, aligns targets with the master dataset, and contains no detected target-week environmental leakage.
+Missing engineered values are not automatically treated as errors. They may arise from the start of the time series, the known dengue surveillance gaps, or delayed MODIS availability and should be considered explicitly when defining model-specific samples.
+
+==============================================================================
+AUDIT COMPLETE
+==============================================================================

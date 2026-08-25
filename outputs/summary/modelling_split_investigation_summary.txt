@@ -1,0 +1,175 @@
+==============================================================================
+MODELLING SPLIT INVESTIGATION
+==============================================================================
+
+PURPOSE
+------------------------------------------------------------------------------
+Compare candidate chronological train / validation / test designs before fitting any forecasting model.
+This is descriptive analysis only. High-incidence thresholds are used to compare target distributions across periods and do not redefine the project as an outbreak-classification task.
+
+FORECASTING SCOPE
+------------------------------------------------------------------------------
+Outcome: weekly dengue case count
+Forecast horizon: one week ahead
+Evaluation design: chronological future holdout
+
+FULL-SERIES TARGET CONTEXT
+------------------------------------------------------------------------------
+Observed weeks: 1,248
+First week: 2000-01-02
+Last week: 2023-12-24
+Mean weekly cases: 55.10
+Median weekly cases: 20.00
+Maximum weekly cases: 2941
+90th percentile: 105.00
+95th percentile: 179.30
+99th percentile: 412.07
+
+CANDIDATE SPLITS
+------------------------------------------------------------------------------
+A_2000_2017__2018_2020__2021_2023
+  Train:      2000-01-01 to 2017-12-31
+  Validation: 2018-01-01 to 2020-12-31
+  Test:       2021-01-01 to 2023-12-31
+
+B_2000_2016__2017_2020__2021_2023
+  Train:      2000-01-01 to 2016-12-31
+  Validation: 2017-01-01 to 2020-12-31
+  Test:       2021-01-01 to 2023-12-31
+
+C_2000_2018__2019_2020__2021_2023
+  Train:      2000-01-01 to 2018-12-31
+  Validation: 2019-01-01 to 2020-12-31
+  Test:       2021-01-01 to 2023-12-31
+
+PERIOD STATISTICS
+------------------------------------------------------------------------------
+
+A_2000_2017__2018_2020__2021_2023
+  TRAIN
+    Observed weeks: 936 (core eligible: 922; all-feature eligible: 902)
+    Total cases: 55,996
+    Mean / median: 59.82 / 22.00
+    Standard deviation: 194.76
+    Maximum: 2941
+    Period p90 / p95 / p99: 107.00 / 163.50 / 682.60
+    Weeks >= full-series p95 (179.30 cases): 45 (4.81%)
+  VALIDATION
+    Observed weeks: 156 (core eligible: 156; all-feature eligible: 156)
+    Total cases: 6,975
+    Mean / median: 44.71 / 20.00
+    Standard deviation: 71.48
+    Maximum: 421
+    Period p90 / p95 / p99: 100.00 / 236.75 / 299.90
+    Weeks >= full-series p95 (179.30 cases): 11 (7.05%)
+  TEST
+    Observed weeks: 156 (core eligible: 156; all-feature eligible: 156)
+    Total cases: 5,789
+    Mean / median: 37.11 / 15.00
+    Standard deviation: 55.91
+    Maximum: 362
+    Period p90 / p95 / p99: 93.00 / 156.50 / 246.60
+    Weeks >= full-series p95 (179.30 cases): 7 (4.49%)
+
+B_2000_2016__2017_2020__2021_2023
+  TRAIN
+    Observed weeks: 883 (core eligible: 869; all-feature eligible: 849)
+    Total cases: 55,172
+    Mean / median: 62.48 / 23.00
+    Standard deviation: 200.17
+    Maximum: 2941
+    Period p90 / p95 / p99: 111.80 / 179.80 / 766.48
+    Weeks >= full-series p95 (179.30 cases): 45 (5.10%)
+  VALIDATION
+    Observed weeks: 209 (core eligible: 209; all-feature eligible: 209)
+    Total cases: 7,799
+    Mean / median: 37.32 / 15.00
+    Standard deviation: 63.61
+    Maximum: 421
+    Period p90 / p95 / p99: 81.20 / 172.20 / 298.92
+    Weeks >= full-series p95 (179.30 cases): 11 (5.26%)
+  TEST
+    Observed weeks: 156 (core eligible: 156; all-feature eligible: 156)
+    Total cases: 5,789
+    Mean / median: 37.11 / 15.00
+    Standard deviation: 55.91
+    Maximum: 362
+    Period p90 / p95 / p99: 93.00 / 156.50 / 246.60
+    Weeks >= full-series p95 (179.30 cases): 7 (4.49%)
+
+C_2000_2018__2019_2020__2021_2023
+  TRAIN
+    Observed weeks: 988 (core eligible: 974; all-feature eligible: 954)
+    Total cases: 56,852
+    Mean / median: 57.54 / 21.00
+    Standard deviation: 189.82
+    Maximum: 2941
+    Period p90 / p95 / p99: 103.00 / 157.65 / 607.72
+    Weeks >= full-series p95 (179.30 cases): 45 (4.55%)
+  VALIDATION
+    Observed weeks: 104 (core eligible: 104; all-feature eligible: 104)
+    Total cases: 6,119
+    Mean / median: 58.84 / 26.00
+    Standard deviation: 83.79
+    Maximum: 421
+    Period p90 / p95 / p99: 176.40 / 271.25 / 300.94
+    Weeks >= full-series p95 (179.30 cases): 11 (10.58%)
+  TEST
+    Observed weeks: 156 (core eligible: 156; all-feature eligible: 156)
+    Total cases: 5,789
+    Mean / median: 37.11 / 15.00
+    Standard deviation: 55.91
+    Maximum: 362
+    Period p90 / p95 / p99: 93.00 / 156.50 / 246.60
+    Weeks >= full-series p95 (179.30 cases): 7 (4.49%)
+
+HIGHEST-BURDEN YEARS IN THE FULL SERIES
+------------------------------------------------------------------------------
+2011: total=19,861, mean=381.94, median=34.00, max=2941
+2008: total=6,529, mean=125.56, median=76.50, max=402
+2020: total=4,853, mean=93.33, median=52.50, max=421
+2014: total=4,643, mean=89.29, median=78.00, max=269
+2012: total=3,563, mean=67.23, median=64.00, max=158
+2013: total=3,406, mean=65.50, median=62.00, max=132
+2009: total=3,326, mean=63.96, median=41.00, max=240
+2022: total=3,311, mean=63.67, median=22.50, max=362
+2002: total=2,386, mean=45.88, median=36.50, max=163
+2004: total=2,347, mean=45.13, median=21.50, max=344
+
+TOP 15 INDIVIDUAL WEEKS
+------------------------------------------------------------------------------
+2011-01-16: 2,941 cases
+2011-02-06: 2,517 cases
+2011-01-23: 2,404 cases
+2011-01-09: 1,944 cases
+2011-01-30: 1,830 cases
+2011-02-20: 1,379 cases
+2011-02-13: 1,197 cases
+2011-01-02: 1,133 cases
+2011-02-27: 919 cases
+2011-03-06: 733 cases
+2011-03-13: 589 cases
+2011-03-20: 449 cases
+2020-03-01: 421 cases
+2008-11-02: 402 cases
+2011-03-27: 377 cases
+
+INTERPRETATION GUIDANCE
+------------------------------------------------------------------------------
+1. Prefer a split that leaves enough historical observations for training while giving validation and test periods meaningful variation in dengue burden.
+2. The final test period should remain untouched during model selection and hyperparameter tuning.
+3. Differences in MAE/RMSE can be strongly affected by epidemic peaks because the target is highly right-skewed.
+4. Feature eligibility should be considered separately from target availability. Models using fewer features may legitimately retain more observations.
+5. This script does not choose a split automatically. The final choice should be documented as a methodological decision before model fitting.
+
+OUTPUTS
+------------------------------------------------------------------------------
+outputs/audit/modelling_split_investigation_summary.txt
+outputs/audit/modelling_split_period_statistics.csv
+outputs/audit/modelling_split_year_statistics.csv
+outputs/audit/modelling_split_month_statistics.csv
+outputs/audit/modelling_split_high_incidence_weeks.csv
+
+==============================================================================
+SPLIT INVESTIGATION COMPLETE
+==============================================================================

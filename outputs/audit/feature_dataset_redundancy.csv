@@ -1,0 +1,2 @@
+feature_a,feature_b,pearson_r,abs_pearson_r
+dengue_cases_lag2,dengue_cases_prev4w_mean,0.9694423557520805,0.9694423557520805

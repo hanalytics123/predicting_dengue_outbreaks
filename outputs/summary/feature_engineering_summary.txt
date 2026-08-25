@@ -1,0 +1,123 @@
+==============================================================================
+ONE-WEEK-AHEAD DENGUE FEATURE ENGINEERING SUMMARY
+==============================================================================
+
+ACTIVE FORECASTING SCOPE
+------------------------------------------------------------------------------
+Outcome: weekly dengue case count
+Forecast horizon: 1 week ahead
+Target week convention: Sunday-Saturday, identified by Sunday week_start_date
+Predictor timing: target week t is predicted using information available through week t-1
+Target-week environmental measurements are not used as predictors.
+
+INPUT / OUTPUT STRUCTURE
+------------------------------------------------------------------------------
+Observed dengue target rows: 1,248
+Candidate model features: 54
+Retained previous-week QA fields: 8
+Output columns: 73
+
+CALENDAR CONTINUITY
+------------------------------------------------------------------------------
+Full Sunday calendar weeks: 1,252
+Observed dengue weeks: 1,248
+Missing dengue surveillance weeks: 4
+Missing weeks:
+  2000-04-30
+  2000-06-11
+  2000-06-25
+  2000-07-09
+
+FEATURE GROUPS
+------------------------------------------------------------------------------
+Dengue lags: 1, 2, 4, 8, 12 week(s)
+Environmental lag candidates: 1, 2, 4, 8, 12 week(s)
+Dengue rolling windows: previous 4 and 8 weeks
+Environmental rolling summaries: previous weeks only
+Seasonality: annual sine/cosine terms based on target week
+
+ENVIRONMENTAL BASE VARIABLES
+------------------------------------------------------------------------------
+  precip_sum_mm
+  temperature_c_mean
+  relative_humidity_pct_mean
+  specific_humidity_kgkg_mean
+  wind_speed_ms_mean
+  surface_pressure_hpa_mean
+  ndvi_mean_weekly
+
+MISSINGNESS AFTER FEATURE ENGINEERING
+------------------------------------------------------------------------------
+Rows with at least one missing candidate feature: 34
+Rows with all candidate features available: 1,214
+Rows with core benchmark features available: 1,234
+
+Candidate features with missing values:
+  dengue_cases_prev8w_mean: 23 (1.84%)
+  precip_sum_mm_prev8w_sum: 23 (1.84%)
+  ndvi_mean_weekly_lag12: 21 (1.68%)
+  ndvi_mean_weekly_prev4w_mean: 20 (1.60%)
+  ndvi_mean_weekly_lag8: 17 (1.36%)
+  dengue_cases_lag12: 16 (1.28%)
+  surface_pressure_hpa_mean_lag12: 16 (1.28%)
+  wind_speed_ms_mean_lag12: 16 (1.28%)
+  specific_humidity_kgkg_mean_lag12: 16 (1.28%)
+  relative_humidity_pct_mean_lag12: 16 (1.28%)
+  precip_sum_mm_lag12: 16 (1.28%)
+  temperature_c_mean_lag12: 16 (1.28%)
+  precip_sum_mm_prev4w_sum: 14 (1.12%)
+  relative_humidity_pct_mean_prev4w_mean: 14 (1.12%)
+  wind_speed_ms_mean_prev4w_mean: 14 (1.12%)
+  temperature_c_mean_prev4w_mean: 14 (1.12%)
+  surface_pressure_hpa_mean_prev4w_mean: 14 (1.12%)
+  specific_humidity_kgkg_mean_prev4w_mean: 14 (1.12%)
+  dengue_cases_prev4w_std: 14 (1.12%)
+  dengue_cases_prev4w_mean: 14 (1.12%)
+  ndvi_mean_weekly_lag4: 13 (1.04%)
+  precip_sum_mm_lag8: 11 (0.88%)
+  ndvi_mean_weekly_lag1: 11 (0.88%)
+  surface_pressure_hpa_mean_lag8: 11 (0.88%)
+  wind_speed_ms_mean_lag8: 11 (0.88%)
+  specific_humidity_kgkg_mean_lag8: 11 (0.88%)
+  temperature_c_mean_lag8: 11 (0.88%)
+  dengue_recent_change_1v4: 11 (0.88%)
+  dengue_cases_lag8: 11 (0.88%)
+  relative_humidity_pct_mean_lag8: 11 (0.88%)
+  ndvi_mean_weekly_lag2: 10 (0.80%)
+  precip_sum_mm_lag4: 7 (0.56%)
+  temperature_c_mean_lag4: 7 (0.56%)
+  dengue_cases_lag4: 7 (0.56%)
+  surface_pressure_hpa_mean_lag4: 7 (0.56%)
+  specific_humidity_kgkg_mean_lag4: 7 (0.56%)
+  relative_humidity_pct_mean_lag4: 7 (0.56%)
+  wind_speed_ms_mean_lag4: 7 (0.56%)
+  dengue_cases_lag1: 5 (0.40%)
+  wind_speed_ms_mean_lag1: 5 (0.40%)
+  surface_pressure_hpa_mean_lag1: 5 (0.40%)
+  specific_humidity_kgkg_mean_lag1: 5 (0.40%)
+  temperature_c_mean_lag1: 5 (0.40%)
+  precip_sum_mm_lag1: 5 (0.40%)
+  relative_humidity_pct_mean_lag1: 5 (0.40%)
+  dengue_cases_lag2: 4 (0.32%)
+  surface_pressure_hpa_mean_lag2: 4 (0.32%)
+  wind_speed_ms_mean_lag2: 4 (0.32%)
+  temperature_c_mean_lag2: 4 (0.32%)
+  precip_sum_mm_lag2: 4 (0.32%)
+  relative_humidity_pct_mean_lag2: 4 (0.32%)
+  specific_humidity_kgkg_mean_lag2: 4 (0.32%)
+
+MODELLING SAFEGUARDS
+------------------------------------------------------------------------------
+1. Feature construction was performed on a complete weekly calendar so lags represent true calendar-week offsets.
+2. All historical rolling features are shifted before aggregation, preventing target-week leakage.
+3. Target-week seasonality is retained because the calendar date is known at forecast time.
+4. Missing features caused by the start of the series, MODIS availability, or surveillance gaps are retained for downstream audit.
+5. No imputation, feature selection, scaling, train/test splitting, or model fitting is performed in this script.
+
+NEXT STEP
+------------------------------------------------------------------------------
+Audit the engineered feature dataset, then define chronological training, validation and final test periods before modelling.
+
+==============================================================================
+FEATURE ENGINEERING COMPLETE
+==============================================================================

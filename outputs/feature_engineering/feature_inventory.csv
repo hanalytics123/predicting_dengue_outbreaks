@@ -1,0 +1,63 @@
+feature,group,source_variable,transformation,available_for_target_week
+week_sin,seasonality,week_start_date,cyclical annual sine term for target week,Yes
+week_cos,seasonality,week_start_date,cyclical annual cosine term for target week,Yes
+dengue_cases_lag1,dengue_history,dengue_cases,1-week lag,Yes
+dengue_cases_lag2,dengue_history,dengue_cases,2-week lag,Yes
+dengue_cases_lag4,dengue_history,dengue_cases,4-week lag,Yes
+dengue_cases_lag8,dengue_history,dengue_cases,8-week lag,Yes
+dengue_cases_lag12,dengue_history,dengue_cases,12-week lag,Yes
+dengue_cases_prev4w_mean,dengue_history,dengue_cases,mean over previous 4 calendar weeks; target week excluded,Yes
+dengue_cases_prev8w_mean,dengue_history,dengue_cases,mean over previous 8 calendar weeks; target week excluded,Yes
+dengue_cases_prev4w_std,dengue_history,dengue_cases,std over previous 4 calendar weeks; target week excluded,Yes
+dengue_recent_change_1v4,dengue_history,dengue_cases,1-week lag minus 4-week lag,Yes
+precip_sum_mm_lag1,environmental,precip_sum_mm,1-week lag,Yes
+precip_sum_mm_lag2,environmental,precip_sum_mm,2-week lag,Yes
+precip_sum_mm_lag4,environmental,precip_sum_mm,4-week lag,Yes
+precip_sum_mm_lag8,environmental,precip_sum_mm,8-week lag,Yes
+precip_sum_mm_lag12,environmental,precip_sum_mm,12-week lag,Yes
+temperature_c_mean_lag1,environmental,temperature_c_mean,1-week lag,Yes
+temperature_c_mean_lag2,environmental,temperature_c_mean,2-week lag,Yes
+temperature_c_mean_lag4,environmental,temperature_c_mean,4-week lag,Yes
+temperature_c_mean_lag8,environmental,temperature_c_mean,8-week lag,Yes
+temperature_c_mean_lag12,environmental,temperature_c_mean,12-week lag,Yes
+relative_humidity_pct_mean_lag1,environmental,relative_humidity_pct_mean,1-week lag,Yes
+relative_humidity_pct_mean_lag2,environmental,relative_humidity_pct_mean,2-week lag,Yes
+relative_humidity_pct_mean_lag4,environmental,relative_humidity_pct_mean,4-week lag,Yes
+relative_humidity_pct_mean_lag8,environmental,relative_humidity_pct_mean,8-week lag,Yes
+relative_humidity_pct_mean_lag12,environmental,relative_humidity_pct_mean,12-week lag,Yes
+specific_humidity_kgkg_mean_lag1,environmental,specific_humidity_kgkg_mean,1-week lag,Yes
+specific_humidity_kgkg_mean_lag2,environmental,specific_humidity_kgkg_mean,2-week lag,Yes
+specific_humidity_kgkg_mean_lag4,environmental,specific_humidity_kgkg_mean,4-week lag,Yes
+specific_humidity_kgkg_mean_lag8,environmental,specific_humidity_kgkg_mean,8-week lag,Yes
+specific_humidity_kgkg_mean_lag12,environmental,specific_humidity_kgkg_mean,12-week lag,Yes
+wind_speed_ms_mean_lag1,environmental,wind_speed_ms_mean,1-week lag,Yes
+wind_speed_ms_mean_lag2,environmental,wind_speed_ms_mean,2-week lag,Yes
+wind_speed_ms_mean_lag4,environmental,wind_speed_ms_mean,4-week lag,Yes
+wind_speed_ms_mean_lag8,environmental,wind_speed_ms_mean,8-week lag,Yes
+wind_speed_ms_mean_lag12,environmental,wind_speed_ms_mean,12-week lag,Yes
+surface_pressure_hpa_mean_lag1,environmental,surface_pressure_hpa_mean,1-week lag,Yes
+surface_pressure_hpa_mean_lag2,environmental,surface_pressure_hpa_mean,2-week lag,Yes
+surface_pressure_hpa_mean_lag4,environmental,surface_pressure_hpa_mean,4-week lag,Yes
+surface_pressure_hpa_mean_lag8,environmental,surface_pressure_hpa_mean,8-week lag,Yes
+surface_pressure_hpa_mean_lag12,environmental,surface_pressure_hpa_mean,12-week lag,Yes
+ndvi_mean_weekly_lag1,environmental,ndvi_mean_weekly,1-week lag,Yes
+ndvi_mean_weekly_lag2,environmental,ndvi_mean_weekly,2-week lag,Yes
+ndvi_mean_weekly_lag4,environmental,ndvi_mean_weekly,4-week lag,Yes
+ndvi_mean_weekly_lag8,environmental,ndvi_mean_weekly,8-week lag,Yes
+ndvi_mean_weekly_lag12,environmental,ndvi_mean_weekly,12-week lag,Yes
+precip_sum_mm_prev4w_sum,environmental,precip_sum_mm,sum over previous 4 calendar weeks; target week excluded,Yes
+precip_sum_mm_prev8w_sum,environmental,precip_sum_mm,sum over previous 8 calendar weeks; target week excluded,Yes
+temperature_c_mean_prev4w_mean,environmental,temperature_c_mean,mean over previous 4 calendar weeks; target week excluded,Yes
+relative_humidity_pct_mean_prev4w_mean,environmental,relative_humidity_pct_mean,mean over previous 4 calendar weeks; target week excluded,Yes
+specific_humidity_kgkg_mean_prev4w_mean,environmental,specific_humidity_kgkg_mean,mean over previous 4 calendar weeks; target week excluded,Yes
+wind_speed_ms_mean_prev4w_mean,environmental,wind_speed_ms_mean,mean over previous 4 calendar weeks; target week excluded,Yes
+surface_pressure_hpa_mean_prev4w_mean,environmental,surface_pressure_hpa_mean,mean over previous 4 calendar weeks; target week excluded,Yes
+ndvi_mean_weekly_prev4w_mean,environmental,ndvi_mean_weekly,mean over previous 4 calendar weeks; target week excluded,Yes
+qa_prev_precip_week_complete,qa_not_model_predictor,precip_week_complete,previous-week QA value,Yes
+qa_prev_temp_humidity_week_complete,qa_not_model_predictor,temp_humidity_week_complete,previous-week QA value,Yes
+qa_prev_wind_week_complete,qa_not_model_predictor,wind_week_complete,previous-week QA value,Yes
+qa_prev_pressure_week_complete,qa_not_model_predictor,pressure_week_complete,previous-week QA value,Yes
+qa_prev_low_valid_pixel_coverage,qa_not_model_predictor,low_valid_pixel_coverage,previous-week QA value,Yes
+qa_prev_ndvi_available,qa_not_model_predictor,ndvi_available,previous-week QA value,Yes
+qa_prev_ndvi_within_age_limit,qa_not_model_predictor,ndvi_within_age_limit,previous-week QA value,Yes
+qa_prev_ndvi_stale,qa_not_model_predictor,ndvi_stale,previous-week QA value,Yes
