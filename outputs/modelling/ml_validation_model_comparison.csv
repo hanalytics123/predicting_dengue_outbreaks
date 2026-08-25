@@ -1,0 +1,7 @@
+algorithm,configuration,feature_set,MAE,RMSE,R2
+Baseline,Persistence,history-only,11.21,26.62,0.86
+Baseline,History + seasonality Ridge,history-only,13.17,25.33,0.874
+Random Forest,RF_3,history+climate,11.096349839918213,22.568207933872657,0.8996677119881844
+Random Forest,RF_1,history-only,12.156666666666666,24.09095047376389,0.8856715181457164
+XGBoost,XGB_3,history+climate,11.196752373988812,21.560115503224843,0.9084309447755812
+XGBoost,XGB_3,history-only,10.55579062914237,21.10172567223906,0.9122832539604262
