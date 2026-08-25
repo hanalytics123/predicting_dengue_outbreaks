@@ -1,0 +1,53 @@
+==============================================================================
+MAYNAS DENGUE MODELLING DATASET INTEGRATION SUMMARY
+==============================================================================
+
+MASTER TABLE
+------------------------------------------------------------------------------
+Master dataset: dengue
+Dengue prediction observations: 1,248
+First observed dengue week: 2000-01-02 00:00:00
+Last observed dengue week: 2023-12-24 00:00:00
+Known dengue surveillance gaps: 4 weeks in 2000; these are not manufactured as zero-case observations.
+
+JOIN COVERAGE
+------------------------------------------------------------------------------
+precipitation: 1,248 / 1,248 dengue weeks matched; 0 unmatched
+temp_humidity: 1,248 / 1,248 dengue weeks matched; 0 unmatched
+wind: 1,248 / 1,248 dengue weeks matched; 0 unmatched
+pressure: 1,248 / 1,248 dengue weeks matched; 0 unmatched
+ndvi: 1,248 / 1,248 dengue weeks matched; 0 unmatched
+
+POST-JOIN VALIDATION
+------------------------------------------------------------------------------
+Integrated rows: 1,248
+Integrated columns: 74
+Duplicate week_start_date values: 0
+Row count preserved from dengue master table: True
+
+MISSING VALUES AFTER INTEGRATION
+------------------------------------------------------------------------------
+ndvi_observation_date: 6
+ndvi_age_days: 6
+ndvi_mean_weekly: 6
+ndvi_median_weekly: 6
+ndvi_std_weekly: 6
+ndvi_min_weekly: 6
+ndvi_max_weekly: 6
+valid_pixel_count: 6
+valid_pixel_fraction_of_max: 6
+low_valid_pixel_coverage: 6
+modis_image_id: 6
+
+SOURCE AVAILABILITY FLAGS
+------------------------------------------------------------------------------
+has_precipitation_data: 1,248 / 1,248 rows available
+has_temp_humidity_data: 1,248 / 1,248 rows available
+has_wind_data: 1,248 / 1,248 rows available
+has_pressure_data: 1,248 / 1,248 rows available
+has_ndvi_data: 1,242 / 1,248 rows available
+
+INTEGRATION METHOD
+------------------------------------------------------------------------------
+Dengue is the master table because each dengue row defines a prediction observation. PERSIANN precipitation, CFS temperature/humidity, CFS wind, CFS surface pressure and MODIS NDVI are left-joined on week_start_date.
+All environmental candidate predictors and QA/completeness fields are retained at this stage. No feature selection or dropping of QA fields is performed during integration.

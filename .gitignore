@@ -1,6 +1,3 @@
-# Sensitive data
-outputs/audit/
-
 # Large raw source data
 data/raw/
 

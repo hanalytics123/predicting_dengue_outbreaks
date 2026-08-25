@@ -1,0 +1,249 @@
+==============================================================================
+MAYNAS DENGUE MODELLING DATASET SUMMARY
+==============================================================================
+
+PURPOSE
+------------------------------------------------------------------------------
+Integrated weekly modelling dataset for predicting dengue in Maynas, Loreto, Peru using climate and environmental predictors.
+Each row represents one observed dengue surveillance week. Dengue is the master table; environmental datasets were left-joined on week_start_date.
+
+TEMPORAL DEFINITION
+------------------------------------------------------------------------------
+Weekly convention: Sunday-Saturday
+week_start_date: Sunday identifying each modelling week
+First observed dengue week: 2000-01-02
+Last observed dengue week: 2023-12-24
+Observed dengue weeks / modelling rows: 1,248
+Calendar weeks in full study period: 1,252. Four known dengue surveillance weeks are absent in 2000 and are not treated as zero-case observations.
+Known missing dengue weeks:
+  2000-04-30
+  2000-06-11
+  2000-06-25
+  2000-07-09
+
+DATASET DIMENSIONS
+------------------------------------------------------------------------------
+Rows: 1,248
+Columns: 74
+Duplicate week_start_date values: 0
+Duplicate full rows: 0
+
+TARGET
+------------------------------------------------------------------------------
+Target column: dengue_cases
+Case definition: Probable and confirmed
+Target observations: 1,248
+Missing target values: 0
+Zero-case weeks: 0
+Minimum weekly cases: 1
+Mean weekly cases: 55.10
+Median weekly cases: 20.00
+Standard deviation: 171.86
+Maximum weekly cases: 2941
+Skewness: 11.24
+
+Target percentiles:
+  1%: 1.00
+  5%: 3.35
+  10%: 5.00
+  25%: 9.00
+  50%: 20.00
+  75%: 46.25
+  90%: 105.00
+  95%: 179.30
+  99%: 412.07
+
+SOURCE DATASETS
+------------------------------------------------------------------------------
+Dengue surveillance: weekly probable and confirmed cases for Maynas, Loreto, Peru.
+PERSIANN-CDR: precipitation spatially aggregated to Maynas and summarised to Sunday-Saturday weeks.
+CFSR / CFSv2: 6-hour forecast climate variables on a 0.5-degree grid, spatially aggregated using grid-cell centres within the GAUL 2024 Maynas polygon.
+MODIS MOD13Q1: vegetation/NDVI observations aligned to weekly rows using the most recent observation available on or before the week end date.
+
+CFS VARIABLES
+------------------------------------------------------------------------------
+Temperature: degrees Celsius
+Dew point: degrees Celsius
+Relative humidity: percent
+Specific humidity: kg/kg
+U wind component: metres per second
+V wind component: metres per second
+Wind speed: metres per second
+Surface pressure: hPa
+
+WIND-SPEED DEFINITION
+------------------------------------------------------------------------------
+Wind speed is the magnitude of the Maynas-level mean wind vector at each 6-hour timestamp, calculated as sqrt(u^2 + v^2), before daily/weekly temporal aggregation.
+
+PRESSURE STREAM SELECTION
+------------------------------------------------------------------------------
+Selected CFS pressure stream: pgbh / pgrbh
+Excluded alternative stream: ipvh / ipvgrbh
+The pgbh/pgrbh stream was retained to provide a continuous pressure-product lineage across the study period. Representative comparisons showed negligible differences in Maynas-level spatial mean pressure between the parallel streams.
+
+NDVI ALIGNMENT
+------------------------------------------------------------------------------
+MOD13Q1 observations are not interpolated using future satellite observations. Each weekly row receives the most recent NDVI observation available on or before the Saturday week end.
+Maximum NDVI carry-forward age: 32 days
+The first six modelling rows pre-date the first MODIS observation and therefore retain missing NDVI values.
+
+MISSING DATA
+------------------------------------------------------------------------------
+ndvi_observation_date: 6 (0.48%)
+ndvi_age_days: 6 (0.48%)
+ndvi_mean_weekly: 6 (0.48%)
+ndvi_median_weekly: 6 (0.48%)
+ndvi_std_weekly: 6 (0.48%)
+ndvi_min_weekly: 6 (0.48%)
+ndvi_max_weekly: 6 (0.48%)
+valid_pixel_count: 6 (0.48%)
+valid_pixel_fraction_of_max: 6 (0.48%)
+low_valid_pixel_coverage: 6 (0.48%)
+modis_image_id: 6 (0.48%)
+
+DATA QUALITY / QA
+------------------------------------------------------------------------------
+precip_week_complete:
+  True: 1,246
+  False: 2
+temp_humidity_week_complete:
+  True: 1,248
+wind_week_complete:
+  True: 1,248
+pressure_week_complete:
+  True: 1,248
+low_valid_pixel_coverage:
+  False: 1,181
+  True: 61
+  nan: 6
+ndvi_available:
+  True: 1,242
+  False: 6
+ndvi_within_age_limit:
+  True: 1,242
+  False: 6
+ndvi_stale:
+  False: 1,248
+has_precipitation_data:
+  True: 1,248
+has_temp_humidity_data:
+  True: 1,248
+has_wind_data:
+  True: 1,248
+has_pressure_data:
+  True: 1,248
+has_ndvi_data:
+  True: 1,242
+  False: 6
+
+VARIABLE INVENTORY
+------------------------------------------------------------------------------
+
+Dengue target and identifiers (10 columns):
+  week_start_date
+  calendar_year
+  calendar_month
+  iso_year
+  iso_week
+  country
+  adm1_name
+  adm2_name
+  case_definition
+  dengue_cases
+
+PERSIANN precipitation (11 columns):
+  precip_sum_mm
+  precip_mean_daily_mm
+  precip_max_daily_mm
+  precip_min_daily_mm
+  rain_days
+  precip_calendar_days_present
+  precip_days_observed
+  precip_mean_valid_grid_cells
+  precip_rain_day_threshold_mm
+  precip_missing_days
+  precip_week_complete
+
+CFS temperature / humidity (16 columns):
+  temp_humidity_week_end_date
+  temperature_c_mean
+  temperature_c_min
+  temperature_c_max
+  dewpoint_c_mean
+  dewpoint_c_min
+  dewpoint_c_max
+  relative_humidity_pct_mean
+  relative_humidity_pct_min
+  relative_humidity_pct_max
+  specific_humidity_kgkg_mean
+  specific_humidity_kgkg_min
+  specific_humidity_kgkg_max
+  temp_humidity_observations_6hourly
+  temp_humidity_week_complete
+  has_temp_humidity_data
+
+CFS wind (12 columns):
+  wind_week_end_date
+  u_wind_ms_mean
+  u_wind_ms_min
+  u_wind_ms_max
+  v_wind_ms_mean
+  v_wind_ms_min
+  v_wind_ms_max
+  wind_speed_ms_mean
+  wind_speed_ms_min
+  wind_speed_ms_max
+  wind_observations_6hourly
+  wind_week_complete
+
+CFS pressure (6 columns):
+  pressure_week_end_date
+  surface_pressure_hpa_mean
+  surface_pressure_hpa_min
+  surface_pressure_hpa_max
+  pressure_observations_6hourly
+  pressure_week_complete
+
+MODIS NDVI (15 columns):
+  ndvi_week_end_date
+  ndvi_observation_date
+  ndvi_age_days
+  ndvi_mean_weekly
+  ndvi_median_weekly
+  ndvi_std_weekly
+  ndvi_min_weekly
+  ndvi_max_weekly
+  valid_pixel_count
+  valid_pixel_fraction_of_max
+  low_valid_pixel_coverage
+  ndvi_available
+  ndvi_within_age_limit
+  ndvi_stale
+  modis_image_id
+
+Source availability flags (4 columns):
+  has_precipitation_data
+  has_wind_data
+  has_pressure_data
+  has_ndvi_data
+
+KNOWN REDUNDANCY / HIGH CORRELATIONS FROM AUDIT
+------------------------------------------------------------------------------
+precip_days_observed <-> precip_mean_valid_grid_cells: r = 1.0000
+valid_pixel_count <-> valid_pixel_fraction_of_max: r = 1.0000
+precip_mean_valid_grid_cells <-> precip_missing_days: r = -1.0000
+precip_days_observed <-> precip_missing_days: r = -1.0000
+precip_sum_mm <-> precip_mean_daily_mm: r = 0.9997
+dewpoint_c_mean <-> specific_humidity_kgkg_mean: r = 0.9978
+dewpoint_c_max <-> specific_humidity_kgkg_max: r = 0.9977
+dewpoint_c_min <-> specific_humidity_kgkg_min: r = 0.9965
+surface_pressure_hpa_mean <-> surface_pressure_hpa_max: r = 0.9361
+surface_pressure_hpa_mean <-> surface_pressure_hpa_min: r = 0.9287
+temperature_c_max <-> relative_humidity_pct_min: r = -0.9115
+These relationships are documented for EDA/feature-selection purposes. No variables have yet been removed on this basis.
+
+CURRENT PROCESSING STATUS
+------------------------------------------------------------------------------
+The integrated dataset has passed structural, temporal, missingness, infinite-value and broad plausibility checks.
+No feature selection, target transformation, lag engineering, imputation or modelling has yet been applied.
+The next analytical stage is exploratory data analysis, followed by evidence-based feature engineering and time-aware modelling.

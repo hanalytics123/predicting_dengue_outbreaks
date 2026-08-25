@@ -1,0 +1,12 @@
+variable_1,variable_2,correlation,absolute_correlation
+precip_days_observed,precip_mean_valid_grid_cells,1.0,1.0
+valid_pixel_count,valid_pixel_fraction_of_max,1.0,1.0
+precip_mean_valid_grid_cells,precip_missing_days,-1.0,1.0
+precip_days_observed,precip_missing_days,-0.9999999999999998,0.9999999999999998
+precip_sum_mm,precip_mean_daily_mm,0.9996596519731019,0.9996596519731019
+dewpoint_c_mean,specific_humidity_kgkg_mean,0.9978203197753351,0.9978203197753351
+dewpoint_c_max,specific_humidity_kgkg_max,0.9977096667479489,0.9977096667479489
+dewpoint_c_min,specific_humidity_kgkg_min,0.9965427522010232,0.9965427522010232
+surface_pressure_hpa_mean,surface_pressure_hpa_max,0.93606495363245,0.93606495363245
+surface_pressure_hpa_mean,surface_pressure_hpa_min,0.9286852229609258,0.9286852229609258
+temperature_c_max,relative_humidity_pct_min,-0.9115053489598424,0.9115053489598424

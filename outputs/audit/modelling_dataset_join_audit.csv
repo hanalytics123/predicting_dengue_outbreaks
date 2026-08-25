@@ -1,0 +1,6 @@
+source,source_rows,matched_dengue_weeks,unmatched_dengue_weeks,first_source_week,last_source_week,first_unmatched_dengue_week,last_unmatched_dengue_week
+precipitation,1252,1248,0,2000-01-02,2023-12-24,,
+temp_humidity,1254,1248,0,1999-12-26,2023-12-31,,
+wind,1254,1248,0,1999-12-26,2023-12-31,,
+pressure,1254,1248,0,1999-12-26,2023-12-31,,
+ndvi,1252,1248,0,2000-01-02,2023-12-24,,

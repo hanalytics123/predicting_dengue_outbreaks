@@ -1,0 +1,182 @@
+==============================================================================
+MAYNAS MODELLING DATASET AUDIT SUMMARY
+==============================================================================
+
+DATASET STRUCTURE
+------------------------------------------------------------------------------
+Rows: 1,248
+Columns: 74
+Expected rows: 1,248
+Row count matches expectation: True
+First week: 2000-01-02 00:00:00
+Expected first week: 2000-01-02 00:00:00
+Last week: 2023-12-24 00:00:00
+Expected last week: 2023-12-24 00:00:00
+All week starts Sunday: True
+Duplicate weeks: 0
+Duplicate full rows: 0
+Invalid/missing week_start_date: 0
+
+DENGUE SURVEILLANCE TIMELINE
+------------------------------------------------------------------------------
+Calendar weeks in study period: 1,252
+Observed dengue weeks: 1,248
+Missing calendar weeks: 4
+Known missing dengue weeks recovered: 4 / 4
+Unexpected missing weeks: 0
+  2000-04-30 - KNOWN
+  2000-06-11 - KNOWN
+  2000-06-25 - KNOWN
+  2000-07-09 - KNOWN
+
+MISSINGNESS
+------------------------------------------------------------------------------
+Rows containing >=1 missing value: 6
+Columns containing missing values: 11
+  ndvi_observation_date: 6 (0.48%)
+  ndvi_age_days: 6 (0.48%)
+  ndvi_mean_weekly: 6 (0.48%)
+  ndvi_median_weekly: 6 (0.48%)
+  ndvi_std_weekly: 6 (0.48%)
+  ndvi_min_weekly: 6 (0.48%)
+  ndvi_max_weekly: 6 (0.48%)
+  valid_pixel_count: 6 (0.48%)
+  valid_pixel_fraction_of_max: 6 (0.48%)
+  low_valid_pixel_coverage: 6 (0.48%)
+  modis_image_id: 6 (0.48%)
+
+INFINITE VALUES
+------------------------------------------------------------------------------
+Total infinite numeric values: 0
+
+TARGET DISTRIBUTION
+------------------------------------------------------------------------------
+count: 1248
+missing: 0
+zero_weeks: 0
+negative_weeks: 0
+mean: 55.09615384615385
+median: 20.0
+std: 171.85675125614455
+min: 1.0
+max: 2941.0
+skewness: 11.239756812686972
+
+Target quantiles:
+  1%: 1.0
+  5%: 3.3500000000000014
+  10%: 5.0
+  25%: 9.0
+  50%: 20.0
+  75%: 46.25
+  90%: 105.0
+  95%: 179.29999999999973
+  99%: 412.0699999999995
+
+RANGE / PLAUSIBILITY CHECKS
+------------------------------------------------------------------------------
+dengue_cases: 0 violation(s)
+precip_sum_mm: 0 violation(s)
+precip_mean_daily_mm: 0 violation(s)
+precip_max_daily_mm: 0 violation(s)
+precip_min_daily_mm: 0 violation(s)
+rain_days: 0 violation(s)
+temperature_c_mean: 0 violation(s)
+temperature_c_min: 0 violation(s)
+temperature_c_max: 0 violation(s)
+dewpoint_c_mean: 0 violation(s)
+dewpoint_c_min: 0 violation(s)
+dewpoint_c_max: 0 violation(s)
+relative_humidity_pct_mean: 0 violation(s)
+relative_humidity_pct_min: 0 violation(s)
+relative_humidity_pct_max: 0 violation(s)
+specific_humidity_kgkg_mean: 0 violation(s)
+specific_humidity_kgkg_min: 0 violation(s)
+specific_humidity_kgkg_max: 0 violation(s)
+wind_speed_ms_mean: 0 violation(s)
+wind_speed_ms_min: 0 violation(s)
+wind_speed_ms_max: 0 violation(s)
+surface_pressure_hpa_mean: 0 violation(s)
+surface_pressure_hpa_min: 0 violation(s)
+surface_pressure_hpa_max: 0 violation(s)
+ndvi_mean_weekly: 0 violation(s)
+ndvi_median_weekly: 0 violation(s)
+ndvi_min_weekly: 0 violation(s)
+ndvi_max_weekly: 0 violation(s)
+ndvi_std_weekly: 0 violation(s)
+ndvi_age_days: 0 violation(s)
+
+CONSTANT FIELDS
+------------------------------------------------------------------------------
+Constant columns: 17
+  country
+  adm1_name
+  adm2_name
+  case_definition
+  precip_calendar_days_present
+  precip_rain_day_threshold_mm
+  temp_humidity_observations_6hourly
+  temp_humidity_week_complete
+  wind_observations_6hourly
+  wind_week_complete
+  pressure_observations_6hourly
+  pressure_week_complete
+  ndvi_stale
+  has_precipitation_data
+  has_temp_humidity_data
+  has_wind_data
+  has_pressure_data
+
+Near-constant columns (>=95% same non-null value): 8
+  precip_days_observed
+  precip_mean_valid_grid_cells
+  precip_missing_days
+  precip_week_complete
+  low_valid_pixel_coverage
+  ndvi_available
+  ndvi_within_age_limit
+  has_ndvi_data
+
+QA / COMPLETENESS FLAGS
+------------------------------------------------------------------------------
+precip_week_complete: True=1,246, False=2, Missing=0
+temp_humidity_week_complete: True=1,248, False=0, Missing=0
+wind_week_complete: True=1,248, False=0, Missing=0
+pressure_week_complete: True=1,248, False=0, Missing=0
+low_valid_pixel_coverage: True=61, False=1,181, Missing=6
+ndvi_available: True=1,242, False=6, Missing=0
+ndvi_stale: True=0, False=1,248, Missing=0
+has_precipitation_data: True=1,248, False=0, Missing=0
+has_temp_humidity_data: True=1,248, False=0, Missing=0
+has_wind_data: True=1,248, False=0, Missing=0
+has_pressure_data: True=1,248, False=0, Missing=0
+has_ndvi_data: True=1,242, False=6, Missing=0
+
+WEEK-END CONSISTENCY
+------------------------------------------------------------------------------
+temp_humidity_week_end_date: 0 mismatch(es)
+wind_week_end_date: 0 mismatch(es)
+pressure_week_end_date: 0 mismatch(es)
+ndvi_week_end_date: 0 mismatch(es)
+
+HIGH CORRELATIONS
+------------------------------------------------------------------------------
+Threshold: |r| >= 0.9
+Pairs flagged: 11
+  precip_days_observed <-> precip_mean_valid_grid_cells: r=1.0000
+  valid_pixel_count <-> valid_pixel_fraction_of_max: r=1.0000
+  precip_mean_valid_grid_cells <-> precip_missing_days: r=-1.0000
+  precip_days_observed <-> precip_missing_days: r=-1.0000
+  precip_sum_mm <-> precip_mean_daily_mm: r=0.9997
+  dewpoint_c_mean <-> specific_humidity_kgkg_mean: r=0.9978
+  dewpoint_c_max <-> specific_humidity_kgkg_max: r=0.9977
+  dewpoint_c_min <-> specific_humidity_kgkg_min: r=0.9965
+  surface_pressure_hpa_mean <-> surface_pressure_hpa_max: r=0.9361
+  surface_pressure_hpa_mean <-> surface_pressure_hpa_min: r=0.9287
+  temperature_c_max <-> relative_humidity_pct_min: r=-0.9115
+
+
+OVERALL RESULT
+------------------------------------------------------------------------------
+PASS - no critical structural, temporal, infinite-value or configured plausibility issues detected.
+Expected NDVI missingness and known dengue surveillance gaps are retained for downstream EDA/modelling decisions.

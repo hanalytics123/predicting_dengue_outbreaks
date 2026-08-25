@@ -28,6 +28,3 @@ Maximum permitted NDVI age: 32 days
 Alignment method: each Sunday-Saturday weekly row is assigned the most recent MOD13Q1 observation available on or before the week end date.
 No future MODIS observation is used to estimate an earlier week, avoiding look-ahead leakage.
 NDVI values older than the configured age threshold are retained for auditability but nulled in the *_weekly modelling feature columns.
-
-Native output: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\data\processed\ndvi\maynas_mod13q1_ndvi_native.csv
-Weekly output: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\data\processed\ndvi\maynas_mod13q1_ndvi_weekly.csv
