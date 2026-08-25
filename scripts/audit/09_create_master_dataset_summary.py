@@ -13,8 +13,8 @@ INPUT_FILE = (
     PROJECT_ROOT
     / "data"
     / "processed"
-    / "modelling"
-    / "maynas_dengue_modelling_dataset.csv"
+    / "master"
+    / "maynas_dengue_master_dataset.csv"
 )
 
 OUTPUT_DIR = (
@@ -30,7 +30,7 @@ OUTPUT_DIR.mkdir(
 
 OUTPUT_FILE = (
     OUTPUT_DIR
-    / "modelling_dataset_summary.txt"
+    / "master_dataset_summary.txt"
 )
 
 
@@ -40,7 +40,7 @@ OUTPUT_FILE = (
 
 if not INPUT_FILE.exists():
     raise FileNotFoundError(
-        "Modelling dataset not found."
+        "Master dataset not found."
     )
 
 df = pd.read_csv(INPUT_FILE)
@@ -159,13 +159,13 @@ summary = []
 
 summary.extend([
     "=" * 78,
-    "MAYNAS DENGUE MODELLING DATASET SUMMARY",
+    "MAYNAS DENGUE MASTER DATASET SUMMARY",
     "=" * 78,
     "",
     "PURPOSE",
     "-" * 78,
     (
-        "Integrated weekly modelling dataset for predicting dengue in "
+        "Integrated weekly master dataset for predicting dengue in "
         "Maynas, Loreto, Peru using climate and environmental predictors."
     ),
     (
@@ -177,10 +177,10 @@ summary.extend([
     "TEMPORAL DEFINITION",
     "-" * 78,
     "Weekly convention: Sunday-Saturday",
-    "week_start_date: Sunday identifying each modelling week",
+    "week_start_date: Sunday identifying each master week",
     f"First observed dengue week: {df['week_start_date'].min().date()}",
     f"Last observed dengue week: {df['week_start_date'].max().date()}",
-    f"Observed dengue weeks / modelling rows: {len(df):,}",
+    f"Observed dengue weeks / master rows: {len(df):,}",
     (
         "Calendar weeks in full study period: 1,252. Four known dengue "
         "surveillance weeks are absent in 2000 and are not treated as "
@@ -287,7 +287,7 @@ summary.extend([
     ),
     "Maximum NDVI carry-forward age: 32 days",
     (
-        "The first six modelling rows pre-date the first MODIS observation "
+        "The first six rows pre-date the first MODIS observation "
         "and therefore retain missing NDVI values."
     ),
     "",
@@ -438,5 +438,5 @@ print("=" * 78)
 print("SUMMARY CREATED")
 print("=" * 78)
 print(
-    "Output: outputs/summary/modelling_dataset_summary.txt"
+    "Output: outputs/summary/master_dataset_summary.txt"
 )

@@ -10,15 +10,15 @@ WIND_FILE = PROJECT_ROOT / "data" / "processed" / "cfs" / "maynas_cfs_wind_weekl
 PRESSURE_FILE = PROJECT_ROOT / "data" / "processed" / "cfs" / "maynas_cfs_pressure_weekly.csv"
 NDVI_FILE = PROJECT_ROOT / "data" / "processed" / "ndvi" / "maynas_mod13q1_ndvi_weekly.csv"
 
-OUTPUT_DIR = PROJECT_ROOT / "data" / "processed" / "modelling"
+OUTPUT_DIR = PROJECT_ROOT / "data" / "processed" / "master"
 AUDIT_DIR = PROJECT_ROOT / "outputs" / "audit"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 AUDIT_DIR.mkdir(parents=True, exist_ok=True)
 
-MODELLING_OUTPUT = OUTPUT_DIR / "maynas_dengue_modelling_dataset.csv"
-SUMMARY_OUTPUT = AUDIT_DIR / "modelling_dataset_integration_summary.txt"
-JOIN_AUDIT_OUTPUT = AUDIT_DIR / "modelling_dataset_join_audit.csv"
+MASTER_OUTPUT = OUTPUT_DIR / "maynas_dengue_master_dataset.csv"
+SUMMARY_OUTPUT = AUDIT_DIR / "master_dataset_integration_summary.txt"
+JOIN_AUDIT_OUTPUT = AUDIT_DIR / "master_dataset_join_audit.csv"
 
 JOIN_KEY = "week_start_date"
 EXPECTED_DENGUE_ROWS = 1248
@@ -116,7 +116,7 @@ def source_match_stats(master_weeks, source_name, source_df):
 
 
 print("=" * 78)
-print("BUILD MAYNAS DENGUE MODELLING DATASET")
+print("BUILD MAYNAS DENGUE MASTER DATASET")
 print("=" * 78)
 
 dengue = load_weekly_dataset("dengue", DENGUE_FILE)
@@ -247,13 +247,13 @@ ordered_columns.extend(
 model = model[ordered_columns]
 
 model.to_csv(
-    MODELLING_OUTPUT,
+    MASTER_OUTPUT,
     index=False,
 )
 
 summary = [
     "=" * 78,
-    "MAYNAS DENGUE MODELLING DATASET INTEGRATION SUMMARY",
+    "MAYNAS DENGUE MASTER DATASET INTEGRATION SUMMARY",
     "=" * 78,
     "",
     "MASTER TABLE",
@@ -342,7 +342,7 @@ summary.extend([
         "dropping of QA fields is performed during integration."
     ),
     "",
-    f"Output dataset: {MODELLING_OUTPUT}",
+    f"Output dataset: {MASTER_OUTPUT}",
     f"Join audit: {JOIN_AUDIT_OUTPUT}",
 ])
 
@@ -356,6 +356,6 @@ print()
 print("=" * 78)
 print("INTEGRATION COMPLETE")
 print("=" * 78)
-print(f"Modelling dataset: {MODELLING_OUTPUT}")
+print(f"Master dataset: {MASTER_OUTPUT}")
 print(f"Join audit: {JOIN_AUDIT_OUTPUT}")
 print(f"Summary: {SUMMARY_OUTPUT}")

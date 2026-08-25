@@ -1,19 +1,19 @@
 ==============================================================================
-MAYNAS DENGUE MODELLING DATASET SUMMARY
+MAYNAS DENGUE MASTER DATASET SUMMARY
 ==============================================================================
 
 PURPOSE
 ------------------------------------------------------------------------------
-Integrated weekly modelling dataset for predicting dengue in Maynas, Loreto, Peru using climate and environmental predictors.
+Integrated weekly master dataset for predicting dengue in Maynas, Loreto, Peru using climate and environmental predictors.
 Each row represents one observed dengue surveillance week. Dengue is the master table; environmental datasets were left-joined on week_start_date.
 
 TEMPORAL DEFINITION
 ------------------------------------------------------------------------------
 Weekly convention: Sunday-Saturday
-week_start_date: Sunday identifying each modelling week
+week_start_date: Sunday identifying each master week
 First observed dengue week: 2000-01-02
 Last observed dengue week: 2023-12-24
-Observed dengue weeks / modelling rows: 1,248
+Observed dengue weeks / master rows: 1,248
 Calendar weeks in full study period: 1,252. Four known dengue surveillance weeks are absent in 2000 and are not treated as zero-case observations.
 Known missing dengue weeks:
   2000-04-30
@@ -85,7 +85,7 @@ NDVI ALIGNMENT
 ------------------------------------------------------------------------------
 MOD13Q1 observations are not interpolated using future satellite observations. Each weekly row receives the most recent NDVI observation available on or before the Saturday week end.
 Maximum NDVI carry-forward age: 32 days
-The first six modelling rows pre-date the first MODIS observation and therefore retain missing NDVI values.
+The first six rows pre-date the first MODIS observation and therefore retain missing NDVI values.
 
 MISSING DATA
 ------------------------------------------------------------------------------
