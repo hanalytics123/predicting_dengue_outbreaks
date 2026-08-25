@@ -1,0 +1,9 @@
+incidence_group,weeks,mean_actual_cases,MAE,model
+Higher-incidence weeks,7,240.42857142857142,54.142857142857146,Persistence
+Other weeks,149,27.55704697986577,9.201342281879194,Persistence
+Higher-incidence weeks,7,240.42857142857142,57.15621336683548,SARIMA_1
+Other weeks,149,27.55704697986577,10.029297471005568,SARIMA_1
+Higher-incidence weeks,7,240.42857142857142,50.14239283970424,XGB_3 history-only
+Other weeks,149,27.55704697986577,9.630268170529565,XGB_3 history-only
+Higher-incidence weeks,7,240.42857142857142,49.576673235212056,XGB_3 history+climate
+Other weeks,149,27.55704697986577,9.32635565572137,XGB_3 history+climate
