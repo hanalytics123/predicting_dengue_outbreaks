@@ -1,0 +1,89 @@
+==============================================================================
+CFS TEMPERATURE / HUMIDITY VALIDATION SUMMARY
+==============================================================================
+
+CFSR
+------------------------------------------------------------------------------
+Downloaded .nc.gz files: 793
+Known failed downloads: 0
+Readable files: 793
+Unreadable files: 0
+
+Overall validation:
+  PASS_WITH_LEVEL_UNVERIFIED: 793
+
+6-hour forecast:
+  PASS: 793
+
+0.5-degree grid:
+  PASS: 793
+
+Expected latitude extent:
+  PASS: 793
+
+Expected longitude extent:
+  PASS: 793
+
+2 m above-ground level:
+  UNKNOWN: 793
+
+Classified variables:
+  unclassified: 2,379
+  temperature: 793
+  dewpoint_temperature: 793
+  specific_humidity: 793
+  relative_humidity: 793
+
+Earliest timestamp: 2000-01-01 00:00:00
+Latest timestamp: 2011-01-01 00:00:00
+
+CFSv2
+------------------------------------------------------------------------------
+Downloaded .nc.gz files: 4,674
+Known failed downloads: 1
+  - cdas1.20210130.pgrbh.grb2.nc.gz
+Readable files: 4,674
+Unreadable files: 0
+
+Overall validation:
+  PASS_WITH_LEVEL_UNVERIFIED: 4,674
+
+6-hour forecast:
+  PASS: 4,674
+
+0.5-degree grid:
+  PASS: 4,674
+
+Expected latitude extent:
+  PASS: 4,674
+
+Expected longitude extent:
+  PASS: 4,674
+
+2 m above-ground level:
+  UNKNOWN: 4,674
+
+Classified variables:
+  unclassified: 14,022
+  temperature: 4,674
+  dewpoint_temperature: 4,674
+  specific_humidity: 4,674
+  relative_humidity: 4,674
+
+Earliest timestamp: 2011-01-01 06:00:00
+Latest timestamp: 2023-12-31 00:00:00
+
+==============================================================================
+CFSR -> CFSv2 TRANSITION
+==============================================================================
+Latest CFSR timestamp: 2011-01-01 00:00:00
+Earliest CFSv2 timestamp: 2011-01-01 06:00:00
+CFSv2 first timestamp minus CFSR last timestamp: 0 days 06:00:00
+
+==============================================================================
+KNOWN ACQUISITION ISSUE
+==============================================================================
+The following CFSv2 source file failed during GDEX download:
+cdas1.20210130.pgrbh.grb2.nc.gz
+GDEX response: HTTP 500 Internal Server Error.
+This file should be treated as a known raw-data acquisition gap and investigated during temporal completeness checking rather than silently imputed.

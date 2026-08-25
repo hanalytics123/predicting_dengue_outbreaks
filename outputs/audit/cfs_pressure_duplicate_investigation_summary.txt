@@ -1,0 +1,257 @@
+==============================================================================
+CFS PRESSURE DUPLICATE INVESTIGATION SUMMARY
+==============================================================================
+
+SOURCE FILE COUNTS
+------------------------------------------------------------------------------
+CFSR: 865
+CFSv2: 9,350
+
+DUPLICATE TIMESTAMP COUNTS
+------------------------------------------------------------------------------
+CFSR:
+  Unique timestamps represented: 16,073
+  Timestamps represented by >1 file: 1,460
+  First duplicate timestamp: 2010-01-01 06:00:00
+  Last duplicate timestamp: 2011-01-01 00:00:00
+  Files per duplicated timestamp:
+    2 files: 1,460 timestamps
+CFSv2:
+  Unique timestamps represented: 18,988
+  Timestamps represented by >1 file: 18,988
+  First duplicate timestamp: 2011-01-01 06:00:00
+  Last duplicate timestamp: 2023-12-31 00:00:00
+  Files per duplicated timestamp:
+    2 files: 18,988 timestamps
+
+DUPLICATE FILE PATTERNS
+------------------------------------------------------------------------------
+CFSR
+  ipvh06.gdas.20100126-20100131.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-01-26 06:00:00 -> 2010-02-01 00:00:00
+  ipvh06.gdas.20100326-20100331.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-03-26 06:00:00 -> 2010-04-01 00:00:00
+  ipvh06.gdas.20100526-20100531.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-05-26 06:00:00 -> 2010-06-01 00:00:00
+  ipvh06.gdas.20100726-20100731.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-07-26 06:00:00 -> 2010-08-01 00:00:00
+  ipvh06.gdas.20100826-20100831.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-08-26 06:00:00 -> 2010-09-01 00:00:00
+  ipvh06.gdas.20101026-20101031.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-10-26 06:00:00 -> 2010-11-01 00:00:00
+  ipvh06.gdas.20101226-20101231.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-12-26 06:00:00 -> 2011-01-01 00:00:00
+  pgbh06.gdas.20100126-20100131.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-01-26 06:00:00 -> 2010-02-01 00:00:00
+  pgbh06.gdas.20100326-20100331.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-03-26 06:00:00 -> 2010-04-01 00:00:00
+  pgbh06.gdas.20100526-20100531.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-05-26 06:00:00 -> 2010-06-01 00:00:00
+  pgbh06.gdas.20100726-20100731.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-07-26 06:00:00 -> 2010-08-01 00:00:00
+  pgbh06.gdas.20100826-20100831.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-08-26 06:00:00 -> 2010-09-01 00:00:00
+  pgbh06.gdas.20101026-20101031.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-10-26 06:00:00 -> 2010-11-01 00:00:00
+  pgbh06.gdas.20101226-20101231.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2010-12-26 06:00:00 -> 2011-01-01 00:00:00
+  ipvh06.gdas.20100101-20100105.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-01-01 06:00:00 -> 2010-01-06 00:00:00
+  ipvh06.gdas.20100106-20100110.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-01-06 06:00:00 -> 2010-01-11 00:00:00
+  ipvh06.gdas.20100111-20100115.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-01-11 06:00:00 -> 2010-01-16 00:00:00
+  ipvh06.gdas.20100116-20100120.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-01-16 06:00:00 -> 2010-01-21 00:00:00
+  ipvh06.gdas.20100121-20100125.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-01-21 06:00:00 -> 2010-01-26 00:00:00
+  ipvh06.gdas.20100201-20100205.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-02-01 06:00:00 -> 2010-02-06 00:00:00
+  ipvh06.gdas.20100206-20100210.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-02-06 06:00:00 -> 2010-02-11 00:00:00
+  ipvh06.gdas.20100211-20100215.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-02-11 06:00:00 -> 2010-02-16 00:00:00
+  ipvh06.gdas.20100216-20100220.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-02-16 06:00:00 -> 2010-02-21 00:00:00
+  ipvh06.gdas.20100221-20100225.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-02-21 06:00:00 -> 2010-02-26 00:00:00
+  ipvh06.gdas.20100301-20100305.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-03-01 06:00:00 -> 2010-03-06 00:00:00
+  ipvh06.gdas.20100306-20100310.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-03-06 06:00:00 -> 2010-03-11 00:00:00
+  ipvh06.gdas.20100311-20100315.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-03-11 06:00:00 -> 2010-03-16 00:00:00
+  ipvh06.gdas.20100316-20100320.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-03-16 06:00:00 -> 2010-03-21 00:00:00
+  ipvh06.gdas.20100321-20100325.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-03-21 06:00:00 -> 2010-03-26 00:00:00
+  ipvh06.gdas.20100401-20100405.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-01 06:00:00 -> 2010-04-06 00:00:00
+  ipvh06.gdas.20100406-20100410.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-06 06:00:00 -> 2010-04-11 00:00:00
+  ipvh06.gdas.20100411-20100415.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-11 06:00:00 -> 2010-04-16 00:00:00
+  ipvh06.gdas.20100416-20100420.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-16 06:00:00 -> 2010-04-21 00:00:00
+  ipvh06.gdas.20100421-20100425.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-21 06:00:00 -> 2010-04-26 00:00:00
+  ipvh06.gdas.20100426-20100430.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-26 06:00:00 -> 2010-05-01 00:00:00
+  ipvh06.gdas.20100501-20100505.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-05-01 06:00:00 -> 2010-05-06 00:00:00
+  ipvh06.gdas.20100506-20100510.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-05-06 06:00:00 -> 2010-05-11 00:00:00
+  ipvh06.gdas.20100511-20100515.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-05-11 06:00:00 -> 2010-05-16 00:00:00
+  ipvh06.gdas.20100516-20100520.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-05-16 06:00:00 -> 2010-05-21 00:00:00
+  ipvh06.gdas.20100521-20100525.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-05-21 06:00:00 -> 2010-05-26 00:00:00
+  ipvh06.gdas.20100601-20100605.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-01 06:00:00 -> 2010-06-06 00:00:00
+  ipvh06.gdas.20100606-20100610.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-06 06:00:00 -> 2010-06-11 00:00:00
+  ipvh06.gdas.20100611-20100615.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-11 06:00:00 -> 2010-06-16 00:00:00
+  ipvh06.gdas.20100616-20100620.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-16 06:00:00 -> 2010-06-21 00:00:00
+  ipvh06.gdas.20100621-20100625.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-21 06:00:00 -> 2010-06-26 00:00:00
+  ipvh06.gdas.20100626-20100630.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-26 06:00:00 -> 2010-07-01 00:00:00
+  ipvh06.gdas.20100701-20100705.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-07-01 06:00:00 -> 2010-07-06 00:00:00
+  ipvh06.gdas.20100706-20100710.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-07-06 06:00:00 -> 2010-07-11 00:00:00
+  ipvh06.gdas.20100711-20100715.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-07-11 06:00:00 -> 2010-07-16 00:00:00
+  ipvh06.gdas.20100716-20100720.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-07-16 06:00:00 -> 2010-07-21 00:00:00
+  ipvh06.gdas.20100721-20100725.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-07-21 06:00:00 -> 2010-07-26 00:00:00
+  ipvh06.gdas.20100801-20100805.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-08-01 06:00:00 -> 2010-08-06 00:00:00
+  ipvh06.gdas.20100806-20100810.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-08-06 06:00:00 -> 2010-08-11 00:00:00
+  ipvh06.gdas.20100811-20100815.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-08-11 06:00:00 -> 2010-08-16 00:00:00
+  ipvh06.gdas.20100816-20100820.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-08-16 06:00:00 -> 2010-08-21 00:00:00
+  ipvh06.gdas.20100821-20100825.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-08-21 06:00:00 -> 2010-08-26 00:00:00
+  ipvh06.gdas.20100901-20100905.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-01 06:00:00 -> 2010-09-06 00:00:00
+  ipvh06.gdas.20100906-20100910.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-06 06:00:00 -> 2010-09-11 00:00:00
+  ipvh06.gdas.20100911-20100915.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-11 06:00:00 -> 2010-09-16 00:00:00
+  ipvh06.gdas.20100916-20100920.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-16 06:00:00 -> 2010-09-21 00:00:00
+  ipvh06.gdas.20100921-20100925.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-21 06:00:00 -> 2010-09-26 00:00:00
+  ipvh06.gdas.20100926-20100930.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-26 06:00:00 -> 2010-10-01 00:00:00
+  ipvh06.gdas.20101001-20101005.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-10-01 06:00:00 -> 2010-10-06 00:00:00
+  ipvh06.gdas.20101006-20101010.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-10-06 06:00:00 -> 2010-10-11 00:00:00
+  ipvh06.gdas.20101011-20101015.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-10-11 06:00:00 -> 2010-10-16 00:00:00
+  ipvh06.gdas.20101016-20101020.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-10-16 06:00:00 -> 2010-10-21 00:00:00
+  ipvh06.gdas.20101021-20101025.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-10-21 06:00:00 -> 2010-10-26 00:00:00
+  ipvh06.gdas.20101101-20101105.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-01 06:00:00 -> 2010-11-06 00:00:00
+  ipvh06.gdas.20101106-20101110.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-06 06:00:00 -> 2010-11-11 00:00:00
+  ipvh06.gdas.20101111-20101115.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-11 06:00:00 -> 2010-11-16 00:00:00
+  ipvh06.gdas.20101116-20101120.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-16 06:00:00 -> 2010-11-21 00:00:00
+  ipvh06.gdas.20101121-20101125.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-21 06:00:00 -> 2010-11-26 00:00:00
+  ipvh06.gdas.20101126-20101130.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-26 06:00:00 -> 2010-12-01 00:00:00
+  ipvh06.gdas.20101201-20101205.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-12-01 06:00:00 -> 2010-12-06 00:00:00
+  ipvh06.gdas.20101206-20101210.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-12-06 06:00:00 -> 2010-12-11 00:00:00
+  ipvh06.gdas.20101211-20101215.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-12-11 06:00:00 -> 2010-12-16 00:00:00
+  ipvh06.gdas.20101216-20101220.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-12-16 06:00:00 -> 2010-12-21 00:00:00
+  ipvh06.gdas.20101221-20101225.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-12-21 06:00:00 -> 2010-12-26 00:00:00
+  pgbh06.gdas.20100101-20100105.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-01-01 06:00:00 -> 2010-01-06 00:00:00
+  pgbh06.gdas.20100106-20100110.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-01-06 06:00:00 -> 2010-01-11 00:00:00
+  pgbh06.gdas.20100111-20100115.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-01-11 06:00:00 -> 2010-01-16 00:00:00
+  pgbh06.gdas.20100116-20100120.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-01-16 06:00:00 -> 2010-01-21 00:00:00
+  pgbh06.gdas.20100121-20100125.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-01-21 06:00:00 -> 2010-01-26 00:00:00
+  pgbh06.gdas.20100201-20100205.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-02-01 06:00:00 -> 2010-02-06 00:00:00
+  pgbh06.gdas.20100206-20100210.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-02-06 06:00:00 -> 2010-02-11 00:00:00
+  pgbh06.gdas.20100211-20100215.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-02-11 06:00:00 -> 2010-02-16 00:00:00
+  pgbh06.gdas.20100216-20100220.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-02-16 06:00:00 -> 2010-02-21 00:00:00
+  pgbh06.gdas.20100221-20100225.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-02-21 06:00:00 -> 2010-02-26 00:00:00
+  pgbh06.gdas.20100301-20100305.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-03-01 06:00:00 -> 2010-03-06 00:00:00
+  pgbh06.gdas.20100306-20100310.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-03-06 06:00:00 -> 2010-03-11 00:00:00
+  pgbh06.gdas.20100311-20100315.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-03-11 06:00:00 -> 2010-03-16 00:00:00
+  pgbh06.gdas.20100316-20100320.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-03-16 06:00:00 -> 2010-03-21 00:00:00
+  pgbh06.gdas.20100321-20100325.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-03-21 06:00:00 -> 2010-03-26 00:00:00
+  pgbh06.gdas.20100401-20100405.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-01 06:00:00 -> 2010-04-06 00:00:00
+  pgbh06.gdas.20100406-20100410.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-06 06:00:00 -> 2010-04-11 00:00:00
+  pgbh06.gdas.20100411-20100415.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-11 06:00:00 -> 2010-04-16 00:00:00
+  pgbh06.gdas.20100416-20100420.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-16 06:00:00 -> 2010-04-21 00:00:00
+  pgbh06.gdas.20100421-20100425.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-21 06:00:00 -> 2010-04-26 00:00:00
+  pgbh06.gdas.20100426-20100430.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-04-26 06:00:00 -> 2010-05-01 00:00:00
+  pgbh06.gdas.20100501-20100505.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-05-01 06:00:00 -> 2010-05-06 00:00:00
+  pgbh06.gdas.20100506-20100510.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-05-06 06:00:00 -> 2010-05-11 00:00:00
+  pgbh06.gdas.20100511-20100515.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-05-11 06:00:00 -> 2010-05-16 00:00:00
+  pgbh06.gdas.20100516-20100520.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-05-16 06:00:00 -> 2010-05-21 00:00:00
+  pgbh06.gdas.20100521-20100525.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-05-21 06:00:00 -> 2010-05-26 00:00:00
+  pgbh06.gdas.20100601-20100605.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-01 06:00:00 -> 2010-06-06 00:00:00
+  pgbh06.gdas.20100606-20100610.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-06 06:00:00 -> 2010-06-11 00:00:00
+  pgbh06.gdas.20100611-20100615.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-11 06:00:00 -> 2010-06-16 00:00:00
+  pgbh06.gdas.20100616-20100620.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-16 06:00:00 -> 2010-06-21 00:00:00
+  pgbh06.gdas.20100621-20100625.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-21 06:00:00 -> 2010-06-26 00:00:00
+  pgbh06.gdas.20100626-20100630.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-06-26 06:00:00 -> 2010-07-01 00:00:00
+  pgbh06.gdas.20100701-20100705.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-07-01 06:00:00 -> 2010-07-06 00:00:00
+  pgbh06.gdas.20100706-20100710.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-07-06 06:00:00 -> 2010-07-11 00:00:00
+  pgbh06.gdas.20100711-20100715.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-07-11 06:00:00 -> 2010-07-16 00:00:00
+  pgbh06.gdas.20100716-20100720.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-07-16 06:00:00 -> 2010-07-21 00:00:00
+  pgbh06.gdas.20100721-20100725.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-07-21 06:00:00 -> 2010-07-26 00:00:00
+  pgbh06.gdas.20100801-20100805.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-08-01 06:00:00 -> 2010-08-06 00:00:00
+  pgbh06.gdas.20100806-20100810.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-08-06 06:00:00 -> 2010-08-11 00:00:00
+  pgbh06.gdas.20100811-20100815.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-08-11 06:00:00 -> 2010-08-16 00:00:00
+  pgbh06.gdas.20100816-20100820.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-08-16 06:00:00 -> 2010-08-21 00:00:00
+  pgbh06.gdas.20100821-20100825.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-08-21 06:00:00 -> 2010-08-26 00:00:00
+  pgbh06.gdas.20100901-20100905.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-01 06:00:00 -> 2010-09-06 00:00:00
+  pgbh06.gdas.20100906-20100910.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-06 06:00:00 -> 2010-09-11 00:00:00
+  pgbh06.gdas.20100911-20100915.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-11 06:00:00 -> 2010-09-16 00:00:00
+  pgbh06.gdas.20100916-20100920.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-16 06:00:00 -> 2010-09-21 00:00:00
+  pgbh06.gdas.20100921-20100925.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-21 06:00:00 -> 2010-09-26 00:00:00
+  pgbh06.gdas.20100926-20100930.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-09-26 06:00:00 -> 2010-10-01 00:00:00
+  pgbh06.gdas.20101001-20101005.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-10-01 06:00:00 -> 2010-10-06 00:00:00
+  pgbh06.gdas.20101006-20101010.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-10-06 06:00:00 -> 2010-10-11 00:00:00
+  pgbh06.gdas.20101011-20101015.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-10-11 06:00:00 -> 2010-10-16 00:00:00
+  pgbh06.gdas.20101016-20101020.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-10-16 06:00:00 -> 2010-10-21 00:00:00
+  pgbh06.gdas.20101021-20101025.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-10-21 06:00:00 -> 2010-10-26 00:00:00
+  pgbh06.gdas.20101101-20101105.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-01 06:00:00 -> 2010-11-06 00:00:00
+  pgbh06.gdas.20101106-20101110.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-06 06:00:00 -> 2010-11-11 00:00:00
+  pgbh06.gdas.20101111-20101115.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-11 06:00:00 -> 2010-11-16 00:00:00
+  pgbh06.gdas.20101116-20101120.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-16 06:00:00 -> 2010-11-21 00:00:00
+  pgbh06.gdas.20101121-20101125.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-21 06:00:00 -> 2010-11-26 00:00:00
+  pgbh06.gdas.20101126-20101130.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-11-26 06:00:00 -> 2010-12-01 00:00:00
+  pgbh06.gdas.20101201-20101205.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-12-01 06:00:00 -> 2010-12-06 00:00:00
+  pgbh06.gdas.20101206-20101210.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-12-06 06:00:00 -> 2010-12-11 00:00:00
+  pgbh06.gdas.20101211-20101215.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-12-11 06:00:00 -> 2010-12-16 00:00:00
+  pgbh06.gdas.20101216-20101220.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-12-16 06:00:00 -> 2010-12-21 00:00:00
+  pgbh06.gdas.20101221-20101225.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2010-12-21 06:00:00 -> 2010-12-26 00:00:00
+  ipvh06.gdas.20100226-20100228.grb2.nc.gz | files=1 | duplicate timestamps=12 | 2010-02-26 06:00:00 -> 2010-03-01 00:00:00
+  pgbh06.gdas.20100226-20100228.grb2.nc.gz | files=1 | duplicate timestamps=12 | 2010-02-26 06:00:00 -> 2010-03-01 00:00:00
+CFSv2
+  cdas1.<DATE>.ipvgrbh.grb2.nc.gz | files=4,657 | duplicate timestamps=18,628 | 2011-04-01 06:00:00 -> 2023-12-31 00:00:00
+  cdas1.<DATE>.pgrbh.grb2.nc.gz | files=4,657 | duplicate timestamps=18,628 | 2011-04-01 06:00:00 -> 2023-12-31 00:00:00
+  ipvh06.gdas.20110126-20110131.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2011-01-26 06:00:00 -> 2011-02-01 00:00:00
+  ipvh06.gdas.20110326-20110331.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2011-03-26 06:00:00 -> 2011-04-01 00:00:00
+  pgbh06.gdas.20110126-20110131.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2011-01-26 06:00:00 -> 2011-02-01 00:00:00
+  pgbh06.gdas.20110326-20110331.grb2.nc.gz | files=1 | duplicate timestamps=24 | 2011-03-26 06:00:00 -> 2011-04-01 00:00:00
+  ipvh06.gdas.20110101-20110105.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-01-01 06:00:00 -> 2011-01-06 00:00:00
+  ipvh06.gdas.20110106-20110110.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-01-06 06:00:00 -> 2011-01-11 00:00:00
+  ipvh06.gdas.20110111-20110115.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-01-11 06:00:00 -> 2011-01-16 00:00:00
+  ipvh06.gdas.20110116-20110120.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-01-16 06:00:00 -> 2011-01-21 00:00:00
+  ipvh06.gdas.20110121-20110125.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-01-21 06:00:00 -> 2011-01-26 00:00:00
+  ipvh06.gdas.20110201-20110205.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-02-01 06:00:00 -> 2011-02-06 00:00:00
+  ipvh06.gdas.20110206-20110210.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-02-06 06:00:00 -> 2011-02-11 00:00:00
+  ipvh06.gdas.20110211-20110215.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-02-11 06:00:00 -> 2011-02-16 00:00:00
+  ipvh06.gdas.20110216-20110220.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-02-16 06:00:00 -> 2011-02-21 00:00:00
+  ipvh06.gdas.20110221-20110225.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-02-21 06:00:00 -> 2011-02-26 00:00:00
+  ipvh06.gdas.20110301-20110305.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-03-01 06:00:00 -> 2011-03-06 00:00:00
+  ipvh06.gdas.20110306-20110310.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-03-06 06:00:00 -> 2011-03-11 00:00:00
+  ipvh06.gdas.20110311-20110315.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-03-11 06:00:00 -> 2011-03-16 00:00:00
+  ipvh06.gdas.20110316-20110320.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-03-16 06:00:00 -> 2011-03-21 00:00:00
+  ipvh06.gdas.20110321-20110325.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-03-21 06:00:00 -> 2011-03-26 00:00:00
+  pgbh06.gdas.20110101-20110105.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-01-01 06:00:00 -> 2011-01-06 00:00:00
+  pgbh06.gdas.20110106-20110110.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-01-06 06:00:00 -> 2011-01-11 00:00:00
+  pgbh06.gdas.20110111-20110115.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-01-11 06:00:00 -> 2011-01-16 00:00:00
+  pgbh06.gdas.20110116-20110120.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-01-16 06:00:00 -> 2011-01-21 00:00:00
+  pgbh06.gdas.20110121-20110125.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-01-21 06:00:00 -> 2011-01-26 00:00:00
+  pgbh06.gdas.20110201-20110205.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-02-01 06:00:00 -> 2011-02-06 00:00:00
+  pgbh06.gdas.20110206-20110210.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-02-06 06:00:00 -> 2011-02-11 00:00:00
+  pgbh06.gdas.20110211-20110215.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-02-11 06:00:00 -> 2011-02-16 00:00:00
+  pgbh06.gdas.20110216-20110220.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-02-16 06:00:00 -> 2011-02-21 00:00:00
+  pgbh06.gdas.20110221-20110225.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-02-21 06:00:00 -> 2011-02-26 00:00:00
+  pgbh06.gdas.20110301-20110305.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-03-01 06:00:00 -> 2011-03-06 00:00:00
+  pgbh06.gdas.20110306-20110310.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-03-06 06:00:00 -> 2011-03-11 00:00:00
+  pgbh06.gdas.20110311-20110315.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-03-11 06:00:00 -> 2011-03-16 00:00:00
+  pgbh06.gdas.20110316-20110320.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-03-16 06:00:00 -> 2011-03-21 00:00:00
+  pgbh06.gdas.20110321-20110325.grb2.nc.gz | files=1 | duplicate timestamps=20 | 2011-03-21 06:00:00 -> 2011-03-26 00:00:00
+  ipvh06.gdas.20110226-20110228.grb2.nc.gz | files=1 | duplicate timestamps=12 | 2011-02-26 06:00:00 -> 2011-03-01 00:00:00
+  pgbh06.gdas.20110226-20110228.grb2.nc.gz | files=1 | duplicate timestamps=12 | 2011-02-26 06:00:00 -> 2011-03-01 00:00:00
+
+SURFACE PRESSURE VARIABLE PATTERNS
+------------------------------------------------------------------------------
+CFSR | variable_name=PRES_L1 | units=Pa | level=Ground or water surface | level_type=nan | forecast_hours=6.0 | lat_resolution=0.5 | lon_resolution=0.5 | files=865 | 2000-01-01 00:00:00 -> 2011-01-01 00:00:00
+CFSv2 | variable_name=PRES_L1 | units=Pa | level=Ground or water surface | level_type=nan | forecast_hours=6.0 | lat_resolution=0.5 | lon_resolution=0.5 | files=9,350 | 2011-01-01 06:00:00 -> 2023-12-31 00:00:00
+
+DUPLICATION BY YEAR
+------------------------------------------------------------------------------
+CFSR
+  2010: 1,459 duplicate timestamps (files/timestamp 2-2)
+  2011: 1 duplicate timestamps (files/timestamp 2-2)
+CFSv2
+  2011: 1,459 duplicate timestamps (files/timestamp 2-2)
+  2012: 1,464 duplicate timestamps (files/timestamp 2-2)
+  2013: 1,460 duplicate timestamps (files/timestamp 2-2)
+  2014: 1,460 duplicate timestamps (files/timestamp 2-2)
+  2015: 1,460 duplicate timestamps (files/timestamp 2-2)
+  2016: 1,464 duplicate timestamps (files/timestamp 2-2)
+  2017: 1,460 duplicate timestamps (files/timestamp 2-2)
+  2018: 1,460 duplicate timestamps (files/timestamp 2-2)
+  2019: 1,460 duplicate timestamps (files/timestamp 2-2)
+  2020: 1,464 duplicate timestamps (files/timestamp 2-2)
+  2021: 1,460 duplicate timestamps (files/timestamp 2-2)
+  2022: 1,460 duplicate timestamps (files/timestamp 2-2)
+  2023: 1,457 duplicate timestamps (files/timestamp 2-2)
+
+REPRESENTATIVE DUPLICATE GROUPS
+------------------------------------------------------------------------------
+CFSR first 2010-01-01 06:00:00:
+  ipvh06.gdas.20100101-20100105.grb2.nc.gz | pgbh06.gdas.20100101-20100105.grb2.nc.gz
+CFSR middle 2010-07-02 18:00:00:
+  ipvh06.gdas.20100701-20100705.grb2.nc.gz | pgbh06.gdas.20100701-20100705.grb2.nc.gz
+CFSR last 2011-01-01 00:00:00:
+  ipvh06.gdas.20101226-20101231.grb2.nc.gz | pgbh06.gdas.20101226-20101231.grb2.nc.gz
+CFSv2 first 2011-01-01 06:00:00:
+  ipvh06.gdas.20110101-20110105.grb2.nc.gz | pgbh06.gdas.20110101-20110105.grb2.nc.gz
+CFSv2 middle 2017-07-01 18:00:00:
+  cdas1.20170701.ipvgrbh.grb2.nc.gz | cdas1.20170701.pgrbh.grb2.nc.gz
+CFSv2 last 2023-12-31 00:00:00:
+  cdas1.20231230.ipvgrbh.grb2.nc.gz | cdas1.20231230.pgrbh.grb2.nc.gz
+
+NEXT INTERPRETATION STEP
+------------------------------------------------------------------------------
+Use the file-pattern and variable-pattern outputs to determine whether duplicate timestamps represent distinct pressure streams or repeated copies of the same product. Do not drop duplicates until representative source files have been compared.
+If duplicate files share identical variable metadata and source pattern, compare their actual pressure values for representative timestamps before choosing a deduplication rule.

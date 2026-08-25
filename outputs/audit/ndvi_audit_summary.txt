@@ -1,0 +1,81 @@
+==============================================================================
+MAYNAS MOD13Q1 NDVI AUDIT SUMMARY
+==============================================================================
+
+Input file: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\data\raw\ndvi\maynas_mod13q1_ndvi_2000_2023.csv
+Rows: 549
+Columns: 11
+
+COLUMN CHECK
+------------------------------------------------------------------------------
+Missing expected columns: 0
+Unexpected columns: 0
+
+TEMPORAL COVERAGE
+------------------------------------------------------------------------------
+First date: 2000-02-18 00:00:00
+Expected first date: 2000-02-18 00:00:00
+First date matches expectation: True
+Last date: 2023-12-19 00:00:00
+Expected last date: 2023-12-19 00:00:00
+Last date matches expectation: True
+Duplicate dates: 0
+Duplicate MODIS image IDs: 0
+
+Observed interval counts:
+  13 days: 17
+  14 days: 6
+  16 days: 525
+Intervals not equal to 16 days: 23
+Unexpected interval file: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\outputs\audit\ndvi_unexpected_date_intervals.csv
+
+MISSING VALUES
+------------------------------------------------------------------------------
+  date: 0
+  year: 0
+  month: 0
+  day_of_year: 0
+  ndvi_mean: 0
+  ndvi_median: 0
+  ndvi_std: 0
+  ndvi_min: 0
+  ndvi_max: 0
+  valid_pixel_count: 0
+  modis_image_id: 0
+
+NDVI VALUE RANGES
+------------------------------------------------------------------------------
+  ndvi_mean: min=0.7649075048527024, max=0.865224217190688
+  ndvi_median: min=0.7929216823614555, max=0.8946378443226524
+  ndvi_std: min=0.0759742538581792, max=0.1864574464787777
+  ndvi_min: min=-0.2, max=-0.0853
+  ndvi_max: min=0.9874, max=0.9996
+
+VALID PIXEL COUNT
+------------------------------------------------------------------------------
+Minimum valid pixels: 14,589
+Median valid pixels: 775,103
+Maximum valid pixels: 1,225,738
+Rows with zero/non-positive valid pixels: 0
+
+ROW-LEVEL VALIDATION
+------------------------------------------------------------------------------
+  PASS: 549
+
+Individual validation failures:
+  date_valid: 0
+  year_matches_date: 0
+  month_matches_date: 0
+  day_of_year_matches_date: 0
+  ndvi_mean_in_range: 0
+  ndvi_median_in_range: 0
+  ndvi_min_in_range: 0
+  ndvi_max_in_range: 0
+  ndvi_std_non_negative: 0
+  ndvi_min_le_mean: 0
+  ndvi_mean_le_max: 0
+  ndvi_min_le_median: 0
+  ndvi_median_le_max: 0
+  valid_pixel_count_positive: 0
+  valid_pixel_count_integer_like: 0
+  required_values_complete: 0

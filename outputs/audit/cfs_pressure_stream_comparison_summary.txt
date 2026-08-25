@@ -1,0 +1,102 @@
+==============================================================================
+CFS PRESSURE STREAM COMPARISON SUMMARY
+==============================================================================
+
+PRE-2010 CFSR FILE PATTERNS
+------------------------------------------------------------------------------
+pgbh: 721 files
+
+Pre-2010 year coverage by pattern:
+  pgbh: 1999 -> 2009
+
+REPRESENTATIVE STREAM COMPARISONS
+------------------------------------------------------------------------------
+CFSR | 2010-01-01 06:00:00
+  A: ipvh06.gdas.20100101-20100105.grb2.nc.gz
+  B: pgbh06.gdas.20100101-20100105.grb2.nc.gz
+  Exact grid equality: False
+  Differing cells: 121 of 121 finite cells
+  Max absolute difference: 151.398438 Pa
+  Mean absolute difference: 33.846397 Pa
+  Maynas mean A: 99377.000000 Pa
+  Maynas mean B: 99376.923077 Pa
+  Maynas mean A-B: 0.076923 Pa
+  Units: Pa / Pa
+  Levels: Ground or water surface / Ground or water surface
+  Forecast hours: 6.0 / 6.0
+
+CFSR | 2010-07-02 18:00:00
+  A: ipvh06.gdas.20100701-20100705.grb2.nc.gz
+  B: pgbh06.gdas.20100701-20100705.grb2.nc.gz
+  Exact grid equality: False
+  Differing cells: 121 of 121 finite cells
+  Max absolute difference: 161.398438 Pa
+  Mean absolute difference: 34.659091 Pa
+  Maynas mean A: 99616.076623 Pa
+  Maynas mean B: 99614.615385 Pa
+  Maynas mean A-B: 1.461238 Pa
+  Units: Pa / Pa
+  Levels: Ground or water surface / Ground or water surface
+  Forecast hours: 6.0 / 6.0
+
+CFSR | 2011-01-01 00:00:00
+  A: ipvh06.gdas.20101226-20101231.grb2.nc.gz
+  B: pgbh06.gdas.20101226-20101231.grb2.nc.gz
+  Exact grid equality: False
+  Differing cells: 121 of 121 finite cells
+  Max absolute difference: 155.000000 Pa
+  Mean absolute difference: 34.633071 Pa
+  Maynas mean A: 98854.353065 Pa
+  Maynas mean B: 98854.230769 Pa
+  Maynas mean A-B: 0.122296 Pa
+  Units: Pa / Pa
+  Levels: Ground or water surface / Ground or water surface
+  Forecast hours: 6.0 / 6.0
+
+CFSv2 | 2011-01-01 06:00:00
+  A: ipvh06.gdas.20110101-20110105.grb2.nc.gz
+  B: pgbh06.gdas.20110101-20110105.grb2.nc.gz
+  Exact grid equality: False
+  Differing cells: 121 of 121 finite cells
+  Max absolute difference: 375.796875 Pa
+  Mean absolute difference: 115.244383 Pa
+  Maynas mean A: 99169.861178 Pa
+  Maynas mean B: 99171.538462 Pa
+  Maynas mean A-B: -1.677284 Pa
+  Units: Pa / Pa
+  Levels: Ground or water surface / Ground or water surface
+  Forecast hours: 6.0 / 6.0
+
+CFSv2 | 2017-07-01 18:00:00
+  A: cdas1.20170701.ipvgrbh.grb2.nc.gz
+  B: cdas1.20170701.pgrbh.grb2.nc.gz
+  Exact grid equality: False
+  Differing cells: 121 of 121 finite cells
+  Max absolute difference: 380.648438 Pa
+  Mean absolute difference: 115.454093 Pa
+  Maynas mean A: 99820.434195 Pa
+  Maynas mean B: 99823.076923 Pa
+  Maynas mean A-B: -2.642728 Pa
+  Units: Pa / Pa
+  Levels: Ground or water surface / Ground or water surface
+  Forecast hours: 6.0 / 6.0
+
+CFSv2 | 2023-12-31 00:00:00
+  A: cdas1.20231230.ipvgrbh.grb2.nc.gz
+  B: cdas1.20231230.pgrbh.grb2.nc.gz
+  Exact grid equality: False
+  Differing cells: 121 of 121 finite cells
+  Max absolute difference: 384.554688 Pa
+  Mean absolute difference: 114.033574 Pa
+  Maynas mean A: 99430.310096 Pa
+  Maynas mean B: 99431.923077 Pa
+  Maynas mean A-B: -1.612981 Pa
+  Units: Pa / Pa
+  Levels: Ground or water surface / Ground or water surface
+  Forecast hours: 6.0 / 6.0
+
+INTERPRETATION GUIDE
+------------------------------------------------------------------------------
+If all representative pairs are exactly equal, the two streams are redundant for surface pressure and one stream can be selected.
+If values differ only trivially, prefer the stream that gives continuous coverage from 2000 through 2023, subject to metadata consistency.
+If differences are material, do not deduplicate yet; investigate the scientific distinction between the pgrbh/pgbh and ipvgrbh/ipvh products.

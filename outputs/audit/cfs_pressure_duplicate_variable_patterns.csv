@@ -1,0 +1,3 @@
+source,variable_name,units,level,level_type,forecast_hours,lat_resolution,lon_resolution,file_count,first_timestamp,last_timestamp
+CFSR,PRES_L1,Pa,Ground or water surface,,6.0,0.5,0.5,865,2000-01-01 00:00:00,2011-01-01
+CFSv2,PRES_L1,Pa,Ground or water surface,,6.0,0.5,0.5,9350,2011-01-01 06:00:00,2023-12-31

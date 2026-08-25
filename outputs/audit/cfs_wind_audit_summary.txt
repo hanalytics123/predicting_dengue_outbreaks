@@ -1,0 +1,98 @@
+==============================================================================
+CFS WIND VALIDATION SUMMARY
+==============================================================================
+
+CFSR
+------------------------------------------------------------------------------
+Downloaded .nc.gz files: 793
+Readable files: 793
+Unreadable files: 0
+
+Overall validation:
+  PASS: 793
+
+6-hour forecast:
+  PASS: 793
+
+0.5-degree grid:
+  PASS: 793
+
+Expected latitude extent:
+  PASS: 793
+
+Expected longitude extent:
+  PASS: 793
+
+10 m above-ground level:
+  PASS: 793
+
+Wind variable presence:
+  U-component present: 793
+  V-component present: 793
+
+Classified variables:
+  unclassified: 2,379
+  u_wind: 793
+  v_wind: 793
+
+Earliest timestamp: 2000-01-01 00:00:00
+Latest timestamp: 2011-01-01 00:00:00
+
+CFSv2
+------------------------------------------------------------------------------
+Downloaded .nc.gz files: 4,675
+Readable files: 4,675
+Unreadable files: 0
+
+Overall validation:
+  PASS: 4,675
+
+6-hour forecast:
+  PASS: 4,675
+
+0.5-degree grid:
+  PASS: 4,675
+
+Expected latitude extent:
+  PASS: 4,675
+
+Expected longitude extent:
+  PASS: 4,675
+
+10 m above-ground level:
+  PASS: 4,675
+
+Wind variable presence:
+  U-component present: 4,675
+  V-component present: 4,675
+
+Classified variables:
+  unclassified: 14,025
+  u_wind: 4,675
+  v_wind: 4,675
+
+Earliest timestamp: 2011-01-01 06:00:00
+Latest timestamp: 2023-12-31 00:00:00
+
+==============================================================================
+CFSR -> CFSv2 TRANSITION
+==============================================================================
+Latest CFSR timestamp: 2011-01-01 00:00:00
+Earliest CFSv2 timestamp: 2011-01-01 06:00:00
+CFSv2 first timestamp minus CFSR last timestamp: 0 days 06:00:00
+
+==============================================================================
+TEMPORAL COMPLETENESS
+==============================================================================
+
+CFSR:
+  Unique timestamps: 16,073
+  Expected timestamps: 16,073
+  Missing timestamps: 0
+  Duplicate timestamps: 0
+
+CFSv2:
+  Unique timestamps: 18,988
+  Expected timestamps: 18,988
+  Missing timestamps: 0
+  Duplicate timestamps: 0

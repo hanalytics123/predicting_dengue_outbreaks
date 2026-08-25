@@ -1,0 +1,33 @@
+==============================================================================
+MAYNAS MOD13Q1 NDVI PROCESSING SUMMARY
+==============================================================================
+
+Input rows: 549
+First MODIS date: 2000-02-18 00:00:00
+Last MODIS date: 2023-12-19 00:00:00
+
+Native interval counts:
+  13 days: 17
+  14 days: 6
+  16 days: 525
+
+Valid-pixel coverage:
+  Minimum valid pixels: 14,589
+  Median valid pixels: 775,103
+  Maximum valid pixels: 1,225,738
+  5th percentile threshold: 216,359
+  Low-coverage composites flagged: 28
+
+Weekly rows: 1,245
+Weeks before first available MODIS observation: 0
+Weeks with NDVI available: 1,245
+Weeks within NDVI age limit: 1,245
+Weeks flagged as stale: 0
+Maximum permitted NDVI age: 32 days
+
+Alignment method: each Monday-Sunday weekly row is assigned the most recent MOD13Q1 observation available on or before the week end date.
+No future MODIS observation is used to estimate an earlier week, avoiding look-ahead leakage.
+NDVI values older than the configured age threshold are retained for auditability but nulled in the *_weekly modelling feature columns.
+
+Native output: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\data\processed\ndvi\maynas_mod13q1_ndvi_native.csv
+Weekly output: \\worldwide.bbc.co.uk\dfs\WDL\Departmental Secure\Human Resources\HROps\HR Operations\Reports\Hannah\Python Repository\predicting_dengue_outbreaks\data\processed\ndvi\maynas_mod13q1_ndvi_weekly.csv

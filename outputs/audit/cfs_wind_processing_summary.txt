@@ -1,0 +1,32 @@
+==============================================================================
+CFS WIND PROCESSING SUMMARY
+==============================================================================
+
+CFSR files processed: 793
+CFSR failed during processing: 0
+CFSv2 files processed: 4,675
+CFSv2 failed during processing: 0
+
+6-hourly rows: 35,061
+First timestamp: 2000-01-01 00:00:00
+Last timestamp: 2023-12-31 00:00:00
+Expected 6-hourly timestamps: 35,061
+Missing 6-hourly timestamps: 0
+Duplicate timestamps: 0
+
+CFSR final timestamp: 2011-01-01 00:00:00
+CFSv2 first timestamp: 2011-01-01 06:00:00
+
+Daily rows: 8,766
+Incomplete days: 1
+Weekly rows: 1,253
+Incomplete weeks: 2
+
+Units after processing:
+  u_wind_ms: metres per second
+  v_wind_ms: metres per second
+  wind_speed_ms: metres per second
+
+Spatial method: unweighted mean of 0.5-degree grid-cell centres falling inside the GAUL 2024 Maynas polygon.
+Wind-speed method: magnitude of the Maynas-level mean U/V wind vector calculated at each 6-hour timestamp as sqrt(u^2 + v^2).
+Temporal method: native 6-hourly observations retained; daily and Monday-Sunday weekly mean/min/max features derived.
